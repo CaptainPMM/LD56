@@ -7,6 +7,6 @@ This game project was developed for the Ludum Dare 56 Game Jam in 72 hours.
 # Contributors
 [Fynn](https://github.com/FynnRieger)  
 [Timo](https://github.com/timo-eberl)  
-[Lena](...)  
+[Lena](https://github.com/lenzge)  
 [Lennart](...)  
 [Paul](https://github.com/captainpmm)
