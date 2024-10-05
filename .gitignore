@@ -16,6 +16,8 @@ mono_crash.*.json
 
 # Custom
 build/
+russdude.png
+russdude.png.import
 
 # GDExtension builds - on windows sometimes files are generated that should (probably) be ignored
 bin/~*
