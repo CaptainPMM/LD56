@@ -48,7 +48,6 @@ shadow_mesh = SubResource("ArrayMesh_g48ev")
 [node name="Furball" parent="." instance=ExtResource("1_irrov")]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
 occlusion_attenuation = 2.05
-displacement_strength = 0.3
 
 [node name="Sphere_001" type="MeshInstance3D" parent="Furball"]
 transform = Transform3D(0.281526, 0, 0, 0, 0.0224451, -0.364171, 0, 0.28067, 0.0291226, 0, -0.0995584, -0.108569)

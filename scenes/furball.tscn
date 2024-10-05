@@ -17,7 +17,7 @@ thickness = 4.149
 color = Color(0.122252, 0.122252, 0.122252, 1)
 occlusion_attenuation = 1.5
 curvature = 5.0
-displacement_strength = 0.5
+displacement_strength = 0.2
 
 [node name="Preview" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_keniw")
