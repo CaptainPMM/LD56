@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://7rmloop8mw4v"]
+[gd_scene load_steps=7 format=3 uid="uid://dn8g1ofwg7w3f"]
 
 [ext_resource type="PackedScene" uid="uid://d0lu7y64qu0kl" path="res://Prefabs/laser_punkt.tscn" id="1_7xjmh"]
 [ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://Prefabs/entity.tscn" id="2_rqlxq"]
