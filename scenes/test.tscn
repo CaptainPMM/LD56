@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://7rmloop8mw4v"]
 
 [ext_resource type="PackedScene" path="res://prefabs/laser_punkt.tscn" id="1_7xjmh"]
-[ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabstemp/entity.tscn" id="2_rqlxq"]
+[ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="2_rqlxq"]
 [ext_resource type="Script" path="res://Skripts/Entity_manager.gd" id="3_si1g8"]
 [ext_resource type="Script" path="res://scripts/laser-pointer.gd" id="4_m6jho"]
 
