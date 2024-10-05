@@ -42,32 +42,32 @@ func _process(_delta: float) -> void:
 	if OS.has_feature("debug"):
 		update_properties_all_materials()
 
-#var acc: float = 0
-#func _physics_process(delta: float) -> void:
-	#acc += delta
-	#var t: float = sin(acc * 2)
-	#var new_pos: Vector3 = Vector3(t, 0, 0)
-	#var pos_change: Vector3 = (new_pos - self.position)
-	#var t_int: int = t
-	#if t - t_int > 0.5:
-		#pos_change = Vector3.ZERO
-	#else:
-		#self.position = new_pos
-	#if (pos_change == Vector3.ZERO):
-		#displacement_vector.y -= 7 * delta
-	#else:
-		#displacement_vector -= pos_change * 7
-	#
-	#if (displacement_vector.length() > 1):
-		#displacement_vector = displacement_vector.normalized()
-	#update_physics_all_materials()
+@onready var old_pos: Vector3 = self.global_position
+
+func _physics_process(delta: float) -> void:
+	var pos_change = self.global_position - old_pos
+	old_pos = self.global_position
+	
+	var glob_scale = self.global_transform.basis.get_scale()
+	displacement_vector -= pos_change * 3 / glob_scale
+	displacement_vector.y -= delta * 10
+	
+	var len: float = 3
+	if (displacement_vector.length() > len):
+		displacement_vector = displacement_vector.normalized() * len
+	update_physics_all_materials()
 
 func update_physics_all_materials() -> void:
 	var children: Array[Node] = $Shells.get_children()
 	for i in children.size():
 		var shell: Shell = children[i]
 		var mat: ShaderMaterial = shell.mesh_instance.material_override
-		mat.set_shader_parameter("u_displacement_vector", displacement_vector)
+		var glob_scale = self.global_transform.basis.get_scale()
+		# quick hack: make vertical movement more visible
+		mat.set_shader_parameter(
+			"u_displacement_vector",
+			displacement_vector * glob_scale * Vector3(1,0.5,1)
+		)
 
 func update_properties_all_materials() -> void:
 	var children: Array[Node] = $Shells.get_children()

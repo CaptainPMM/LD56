@@ -1,14 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2jcdvai0x0s6"]
 
 [ext_resource type="Script" path="res://scripts/entity.gd" id="1_1biwx"]
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ctt7h"]
-albedo_color = Color(0.231373, 0.286275, 1, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_gp3um"]
-material = SubResource("ORMMaterial3D_ctt7h")
-radius = 0.25
-height = 0.5
+[ext_resource type="PackedScene" uid="uid://brvfsvdd5nkmm" path="res://scenes/furball.tscn" id="2_44iq6"]
+[ext_resource type="PackedScene" uid="uid://bj2xlqdbn0jtn" path="res://models/Russsmaenchen.glb" id="3_octns"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bsj1o"]
 radius = 0.25
@@ -24,9 +18,15 @@ height = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0600161, 0)
 script = ExtResource("1_1biwx")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_gp3um")
-skeleton = NodePath("../..")
+[node name="Visual" type="Node3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="Fur" parent="Visual" instance=ExtResource("2_44iq6")]
+
+[node name="Russsmaenchen" parent="Visual" instance=ExtResource("3_octns")]
+
+[node name="Icosphere" parent="Visual/Russsmaenchen" index="0"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_bsj1o")
@@ -41,3 +41,5 @@ visible = false
 mesh = SubResource("SphereMesh_7ds2b")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+
+[editable path="Visual/Russsmaenchen"]
