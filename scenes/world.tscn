@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://qa6avp01dssx" path="res://prefabs/camera_rail.tscn" id="2_mwuut"]
 [ext_resource type="Script" path="res://scripts/entity_manager.gd" id="3_ax36f"]
 [ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="5_016fe"]
-[ext_resource type="PackedScene" uid="uid://d3a62xdco6snd" path="res://scenes/Laserpunkt.tscn" id="6_48oc1"]
+[ext_resource type="PackedScene" uid="uid://ban375wxxkrsp" path="res://scenes/Laserpunkt.tscn" id="6_48oc1"]
 [ext_resource type="PackedScene" uid="uid://wc25lmihuyod" path="res://prefabs/lightweighted_ball.tscn" id="7_0o4j3"]
 [ext_resource type="PackedScene" uid="uid://bnkdrv3m8vmo" path="res://prefabs/static_cube.tscn" id="8_ouhba"]
 
