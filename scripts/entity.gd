@@ -6,10 +6,10 @@ class_name entity
 @export var attraction_strength = 10 
 @export var damping_strength = 30    
 @export var min_distance = 0.2      
-@export var max_speed = 0.5        
+@export var max_speed = 0.3        
 
 # flocking
-@export var separation_radius = 0.08       # Radius within which entities will try to separate
+@export var separation_radius = 0.06       # Radius within which entities will try to separate
 @export var alignment_radius = 0.5         # Radius within which entities will align their direction
 @export var cohesion_radius = 7.0         # Radius within which entities will try to cohere
 @export var separation_strength = 1.0     # Strength of the separation force
@@ -132,4 +132,3 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is entity && body != self:
 		if not is_active:
 			emit_signal("activated", self)
-			print("activated")
