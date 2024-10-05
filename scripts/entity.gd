@@ -17,6 +17,7 @@ class_name entity
 @export var cohesion_strength = 2.0        # Strength of the cohesion force
 
 signal activated(entity)
+signal deactivated(entity)
 
 var is_active: bool # activated by entity_manager
 var target_position = Vector3()
@@ -132,3 +133,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is entity && body != self:
 		if not is_active:
 			emit_signal("activated", self)
+
+func on_map_exited():
+	if is_active:
+		emit_signal("deactivated", self)

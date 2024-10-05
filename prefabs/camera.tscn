@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bolfnpqucy2q4"]
+[gd_scene load_steps=6 format=3 uid="uid://bolfnpqucy2q4"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_mldnq"]
 
@@ -11,6 +11,9 @@ sky_material = SubResource("ProceduralSkyMaterial_o3mev")
 background_mode = 2
 sky = SubResource("Sky_uml67")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_umasd"]
+size = Vector3(2.54, 0.5, 1.76)
+
 [node name="Camera" type="Node3D"]
 script = ExtResource("1_mldnq")
 
@@ -18,3 +21,11 @@ script = ExtResource("1_mldnq")
 transform = Transform3D(1, 0, 0, 0, 0.645458, 0.763796, 0, -0.763796, 0.645458, 0, 0.65, 0.55)
 environment = SubResource("Environment_wdhqm")
 current = true
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0357123, -0.216199)
+shape = SubResource("BoxShape3D_umasd")
+
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

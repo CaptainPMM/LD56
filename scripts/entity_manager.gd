@@ -4,10 +4,10 @@ class_name entity_manager
 
 @export var entity_scene: PackedScene
 @export var laser_point: Node3D
-@export var entity_count: int = 50
 @export var start_entities: Array[entity]
 
 var active_entities: Array[entity]
+var current_count = 0
 
 func _process(delta: float) -> void:
 	# all entities will follow the laser
@@ -17,16 +17,24 @@ func _process(delta: float) -> void:
 func _on_entity_activated(entity):
 	active_entities.append(entity)
 	entity.is_active = true
+	entity.deactivated.connect(_on_entity_deactivated)
+	current_count += 1
+	print("Score: " + str(current_count))
+	
+func _on_entity_deactivated(entity):
+	active_entities.erase(entity)
+	entity.is_active = false
+	current_count -= 1
+	print("Score: " + str(current_count))
 	
 func activate_start_entities():
-	active_entities = start_entities
-	for entity in active_entities:
-		entity.is_active = true
+	for entity in start_entities:
+		_on_entity_activated(entity)
 	for entity in get_tree().get_nodes_in_group("entity"):
 		entity.activated.connect(_on_entity_activated)
 	
 func instantiate_random():
-	for i in range(entity_count):
+	for i in range(50):
 		var entity_instance = entity_scene.instantiate() 
 		add_child(entity_instance)
 		

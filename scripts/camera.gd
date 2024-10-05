@@ -57,3 +57,8 @@ func getMouseInputs() -> bool:
 
 func setMouseInputs(enabled: bool) -> void:
 	_mouseInputs = enabled
+
+
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	if body is entity:
+		body.on_map_exited()
