@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2jcdvai0x0s6"]
+[gd_scene load_steps=8 format=3 uid="uid://c2jcdvai0x0s6"]
 
 [ext_resource type="Script" path="res://scripts/entity.gd" id="1_1biwx"]
+[ext_resource type="Script" path="res://scripts/entity_visuals.gd" id="2_8vn4d"]
 [ext_resource type="PackedScene" uid="uid://brvfsvdd5nkmm" path="res://scenes/furball.tscn" id="2_44iq6"]
 [ext_resource type="PackedScene" uid="uid://bj2xlqdbn0jtn" path="res://models/Russsmaenchen.glb" id="3_octns"]
 
@@ -20,6 +21,7 @@ script = ExtResource("1_1biwx")
 
 [node name="Visual" type="Node3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("2_8vn4d")
 
 [node name="Fur" parent="Visual" instance=ExtResource("2_44iq6")]
 

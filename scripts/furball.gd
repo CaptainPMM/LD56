@@ -33,6 +33,8 @@ func _ready() -> void:
 		$Shells.add_child(shell)
 		shell.name = str("Shell ", i)
 		shell.mesh_instance.mesh = shell_mesh
+		if i != 0: # shadow only on one mesh
+			shell.mesh_instance.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		var mat_duplicate: ShaderMaterial = shell_material.duplicate()
 		update_properties_material(mat_duplicate, i)
 		shell.mesh_instance.material_override = mat_duplicate
