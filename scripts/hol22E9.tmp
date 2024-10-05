@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://snqkj1my34mx"]
+
+[ext_resource type="PackedScene" uid="uid://ccf78v5vffhs7" path="res://models/HolzWuerfel.glb" id="1_cigcf"]
+[ext_resource type="Script" path="res://scripts/holz_wuerfel.gd" id="2_hp3vi"]
+
+[node name="Holzwuerfel" type="Node3D"]
+
+[node name="HolzWuerfel" parent="." instance=ExtResource("1_cigcf")]
+script = ExtResource("2_hp3vi")
+
+[node name="S1" type="Label3D" parent="HolzWuerfel"]
+transform = Transform3D(0.855, 0, 0, 0, 0.855, 0, 0, 0, 0.855, 0, 0, -0.924884)
+pixel_size = 0.004
+text = "A"
+font_size = 256
+outline_size = 0
+
+[node name="S2" type="Label3D" parent="HolzWuerfel"]
+transform = Transform3D(0.855, -1.49493e-07, 0, 1.49493e-07, 0.855, 0, 0, 0, 0.855, 0, 0, 0.947367)
+pixel_size = 0.004
+text = "A"
+font_size = 256
+outline_size = 0
+
+[node name="S3" type="Label3D" parent="HolzWuerfel"]
+transform = Transform3D(-3.73732e-08, 0, -0.855, 0, 0.855, 0, 0.855, 0, -3.73732e-08, 0.936125, 0, 0.0112416)
+pixel_size = 0.004
+text = "A"
+font_size = 256
+outline_size = 0
+
+[node name="S4" type="Label3D" parent="HolzWuerfel"]
+transform = Transform3D(6.45507e-08, -8.01913e-15, -0.855, 1.49493e-07, 0.855, 3.26727e-15, 0.855, -1.49493e-07, 6.45507e-08, -0.936125, 0, 0.0112415)
+pixel_size = 0.004
+text = "A"
+font_size = 256
+outline_size = 0
+
+[node name="S5" type="Label3D" parent="HolzWuerfel"]
+transform = Transform3D(0.855, -3.73732e-08, -1.63364e-15, 0, -3.73732e-08, 0.855, -3.73732e-08, -0.855, -3.73732e-08, 4.09782e-08, -0.936125, 0.0112416)
+pixel_size = 0.004
+text = "A"
+font_size = 256
+outline_size = 0
+
+[node name="S6" type="Label3D" parent="HolzWuerfel"]
+transform = Transform3D(-0.855, 1.29101e-07, 5.6432e-15, 0, -3.73732e-08, 0.855, 1.29101e-07, 0.855, 3.73732e-08, -4.09782e-08, 0.936125, 0.0112415)
+pixel_size = 0.004
+text = "A"
+font_size = 256
+outline_size = 0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.48897)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.704077, 0.710124, 0, -0.710124, 0.704077, -5.99578, 0, 0)
+
+[editable path="HolzWuerfel"]
