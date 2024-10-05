@@ -20,3 +20,8 @@ func _process(delta: float) -> void:
 	
 	if rayResult:
 		laserPunkt.position = rayResult.position;
+		
+	
+	# all entities will follow the laser
+	for entity in get_tree().get_nodes_in_group("entity"):
+		entity.target_position = laserPunkt.position

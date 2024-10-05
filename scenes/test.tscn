@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://7rmloop8mw4v"]
+
+[ext_resource type="PackedScene" uid="uid://d0lu7y64qu0kl" path="res://Prefabs/laser_punkt.tscn" id="1_7xjmh"]
+[ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://Prefabs/entity.tscn" id="2_rqlxq"]
+[ext_resource type="Script" path="res://Skripts/Entity_manager.gd" id="3_si1g8"]
+[ext_resource type="Script" path="res://Skripts/LaserPointer.gd" id="4_m6jho"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cjkmi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kqiu1"]
+size = Vector3(2.00629, 1, 1.99866)
+
+[node name="World" type="Node3D"]
+
+[node name="LaserPunkt" parent="." instance=ExtResource("1_7xjmh")]
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+mesh = SubResource("PlaneMesh_cjkmi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(4, 0, 0, 0, 0.5, 0, 0, 0, 4, 0.00256348, -0.25, 0.0168457)
+shape = SubResource("BoxShape3D_kqiu1")
+
+[node name="entity" parent="." instance=ExtResource("2_rqlxq")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.06222, 0)
+light_energy = 4.24
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("laserPunkt")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -0.04, 1.893, 1.19)
+script = ExtResource("4_m6jho")
+laserPunkt = NodePath("../LaserPunkt")
+
+[node name="Entity_Manager" type="Node" parent="."]
+script = ExtResource("3_si1g8")
+entity_scene = ExtResource("2_rqlxq")
