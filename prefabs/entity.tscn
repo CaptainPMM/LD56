@@ -7,15 +7,21 @@ albedo_color = Color(0.231373, 0.286275, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_gp3um"]
 material = SubResource("ORMMaterial3D_ctt7h")
+radius = 0.25
+height = 0.5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bsj1o"]
+radius = 0.25
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8y8s2"]
+radius = 0.25
 
 [sub_resource type="SphereMesh" id="SphereMesh_7ds2b"]
+radius = 0.25
+height = 0.5
 
 [node name="entity" type="RigidBody3D"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.0600161, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0600161, 0)
 mass = 5.0
 script = ExtResource("1_1biwx")
 
