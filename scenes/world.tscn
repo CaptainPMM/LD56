@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://7rmloop8mw4v"]
+[gd_scene load_steps=5 format=3 uid="uid://7rmloop8mw4v"]
+
+[ext_resource type="Script" path="res://Skripts/LaserPointer.gd" id="1_1hqbf"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_y4eco"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t73ts"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hb2fb"]
 
 [node name="World" type="Node3D"]
+
+[node name="LaserPunkt" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -6.15904, 0.974327, -2.69484)
+mesh = SubResource("SphereMesh_y4eco")
+skeleton = NodePath("../Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("laserPunkt")]
+transform = Transform3D(1, 0, 0, 0, 0.945177, 0.326558, 0, -0.326558, 0.945177, 0, 0.974327, 2.44016)
+script = ExtResource("1_1hqbf")
+laserPunkt = NodePath("../LaserPunkt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.91756, 0.342154, -0.202518, 0, 0.509357, 0.860555, 0.397596, -0.789612, 0.467366, -8.01572, 0, -1.02541)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_t73ts")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_hb2fb")
