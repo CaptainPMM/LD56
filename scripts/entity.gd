@@ -1,30 +1,36 @@
 extends RigidBody3D
 
+class_name entity
+
 # controlling
 @export var attraction_strength = 10 
 @export var damping_strength = 30    
 @export var min_distance = 0.2      
-@export var max_speed = 0.5        
+@export var max_speed = 0.3        
 
 # flocking
-@export var separation_radius = 0.2       # Radius within which entities will try to separate
-@export var alignment_radius = 1.0         # Radius within which entities will align their direction
-@export var cohesion_radius = 5.0         # Radius within which entities will try to cohere
-@export var separation_strength = 5.0     # Strength of the separation force
+@export var separation_radius = 0.06       # Radius within which entities will try to separate
+@export var alignment_radius = 0.5         # Radius within which entities will align their direction
+@export var cohesion_radius = 7.0         # Radius within which entities will try to cohere
+@export var separation_strength = 1.0     # Strength of the separation force
 @export var alignment_strength = 1.0       # Strength of the alignment force
-@export var cohesion_strength = 1.0        # Strength of the cohesion force
+@export var cohesion_strength = 2.0        # Strength of the cohesion force
 
+signal activated(entity)
 
+var is_active: bool # activated by entity_manager
 var target_position = Vector3()
 var log_timer = 0.0
 
-func _ready() -> void:
+func _init() -> void:
 	self.add_to_group("entity")
+	
+func _ready():
+	$Area3D.scale = Vector3(cohesion_radius, cohesion_radius, cohesion_radius)
 	
 
 func _physics_process(delta):
-	if target_position == Vector3():
-		#print("["+ name + "] Error: no target set")
+	if not is_active:
 		return
 		
 	# flocking behavior
@@ -120,3 +126,9 @@ func get_neighbors(radius: float) -> Array:
 			if global_transform.origin.distance_to(entity.global_transform.origin) < radius:
 				neighbors.append(entity)
 	return neighbors
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body is entity && body != self:
+		if not is_active:
+			emit_signal("activated", self)

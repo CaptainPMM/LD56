@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://wc25lmihuyod"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_dajek"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5i24v"]
+radius = 0.1
+
+[node name="lightweighted_ball" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63493, 0.12623, 0.220403)
+mass = 0.1
+gravity_scale = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_dajek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_5i24v")

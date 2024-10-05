@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ban375wxxkrsp"]
+
+[ext_resource type="Shader" path="res://shader/laser_point.gdshader" id="1_b8qhm"]
+[ext_resource type="Texture2D" uid="uid://b8edqkopo6dss" path="res://textures/Laserpunkt.png" id="2_gscib"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0uar5"]
+render_priority = 0
+shader = ExtResource("1_b8qhm")
+shader_parameter/albedo = Color(1, 1, 1, 0.980392)
+shader_parameter/scale_mod = 1.0
+shader_parameter/cube_half_size = 1.0
+shader_parameter/texture_albedo = ExtResource("2_gscib")
+
+[sub_resource type="BoxMesh" id="BoxMesh_k4urj"]
+material = SubResource("ShaderMaterial_0uar5")
+
+[node name="LaserPoint" type="Node3D"]
+
+[node name="LaserPunkt" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_k4urj")
+skeleton = NodePath("")

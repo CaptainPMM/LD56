@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0lu7y64qu0kl"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_y4eco"]
-
-[node name="LaserPunkt" type="MeshInstance3D"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -6.15904, 0.974327, -2.69484)
-mesh = SubResource("SphereMesh_y4eco")
-skeleton = NodePath("../Camera3D")
