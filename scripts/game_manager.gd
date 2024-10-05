@@ -2,6 +2,7 @@ extends Node
 class_name GameManager
 
 @export var _cam : Camera
+@export var _entity_manager : entity_manager
 
 var _initCamSpeed : float
 
@@ -18,6 +19,7 @@ func _input(event: InputEvent) -> void:
 func startGame() -> void:
 	_cam.setXMovSpeed(_initCamSpeed)
 	_cam.setMouseInputs(true)
+	_entity_manager.activate_start_entities()
 	
 func getDudeCount() -> int:
 	return get_tree().get_nodes_in_group("entity").size() # not a very good implementation
