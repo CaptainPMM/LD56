@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://5cpwx10se6bx"]
+
+[ext_resource type="Shader" path="res://shader/laser_point.gdshader" id="1_h1mx4"]
+[ext_resource type="Texture2D" uid="uid://b8edqkopo6dss" path="res://textures/Laserpunkt.png" id="2_h4w0t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jxnsu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3p6bx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0uar5"]
+render_priority = 0
+shader = ExtResource("1_h1mx4")
+shader_parameter/albedo = Color(1, 1, 1, 0.980392)
+shader_parameter/scale_mod = 0.7
+shader_parameter/cube_half_size = 1.0
+shader_parameter/texture_albedo = ExtResource("2_h4w0t")
+
+[sub_resource type="BoxMesh" id="BoxMesh_k4urj"]
+material = SubResource("ShaderMaterial_0uar5")
+
+[node name="LaserPointTest" type="Node3D"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79492, 0.393445, -0.708221)
+mesh = SubResource("BoxMesh_jxnsu")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.265, 0, 0, 0, 0.04, 0, 0, 0, 5.13, 0, 0, 0)
+mesh = SubResource("BoxMesh_3p6bx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.484428, 0.682648, 0.547103, -0.87472, 0.387933, 0.29047, -0.0139503, -0.619274, 0.785051, 0, 2.54774, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.928187, 0.372113, 0, -0.372113, 0.928187, 0, 1.63516, 2.95499)
+
+[node name="LaserPunkt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.567475, 0.293024, -0.0275456)
+mesh = SubResource("BoxMesh_k4urj")
+skeleton = NodePath("../DirectionalLight3D")
