@@ -86,9 +86,11 @@ mesh = SubResource("BoxMesh_gv3bx")
 transform = Transform3D(0.282135, 0, 0, 0, 0.280906, 0, 0, 0, 0.49359, 7.95451, 0.0500002, -0.118085)
 mesh = SubResource("BoxMesh_gv3bx")
 
-[node name="EntityManager" type="Node3D" parent="."]
+[node name="EntityManager" type="Node3D" parent="." node_paths=PackedStringArray("laser_point", "start_entities")]
 script = ExtResource("3_ax36f")
 entity_scene = ExtResource("5_016fe")
+laser_point = NodePath("../LaserPoint")
+start_entities = [NodePath("../entity"), NodePath("../entity2"), NodePath("../entity3")]
 
 [node name="entity" parent="." instance=ExtResource("5_016fe")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.065, -0.1)
