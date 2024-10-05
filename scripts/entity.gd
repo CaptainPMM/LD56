@@ -23,9 +23,9 @@ func _ready() -> void:
 	
 
 func _physics_process(delta):
-	if target_position == Vector3():
+	#if target_position == Vector3():
 		#print("["+ name + "] Error: no target set")
-		return
+		#return
 		
 	# flocking behavior
 	var separation_force = calculate_separation_force()

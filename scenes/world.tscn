@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://7rmloop8mw4v"]
+[gd_scene load_steps=12 format=3 uid="uid://7rmloop8mw4v"]
 
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_hp732"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="1_v80il"]
 [ext_resource type="PackedScene" uid="uid://qa6avp01dssx" path="res://prefabs/camera_rail.tscn" id="2_mwuut"]
 [ext_resource type="Script" path="res://scripts/entity-manager.gd" id="3_ax36f"]
@@ -21,6 +22,10 @@ albedo_color = Color(1, 0.42, 0.42, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_y4eco"]
 
 [node name="World" type="Node3D"]
+
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("_cam")]
+script = ExtResource("1_hp732")
+_cam = NodePath("../Camera")
 
 [node name="Camera" parent="." node_paths=PackedStringArray("_laserPoint") instance=ExtResource("1_v80il")]
 _laserPoint = NodePath("../LaserPoint")
@@ -91,13 +96,13 @@ script = ExtResource("3_ax36f")
 entity_scene = ExtResource("3_q2jdj")
 
 [node name="entity" parent="." instance=ExtResource("3_q2jdj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.04727, 0.0650162, -0.154661)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.065, -0.1)
 
 [node name="entity2" parent="." instance=ExtResource("3_q2jdj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.975508, 0.0650162, 0.109452)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.065, 0.1)
 
 [node name="entity3" parent="." instance=ExtResource("3_q2jdj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.969305, 0.0650162, 0.329902)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.065, 0.3)
 
 [editable path="CameraRail"]
 [editable path="CameraRail2"]
