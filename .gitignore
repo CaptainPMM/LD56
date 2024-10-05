@@ -16,3 +16,7 @@ mono_crash.*.json
 
 # Custom
 build/
+
+# GDExtension builds - on windows sometimes files are generated that should (probably) be ignored
+bin/~*
+addons/*/*/~*
