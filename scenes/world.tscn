@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://7rmloop8mw4v"]
 
-[ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="1_v80il"]
-[ext_resource type="PackedScene" uid="uid://qa6avp01dssx" path="res://prefabs/camera_rail.tscn" id="2_mwuut"]
+[ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabstemp/camera.tscn" id="1_v80il"]
+[ext_resource type="PackedScene" uid="uid://qa6avp01dssx" path="res://prefabstemp/camera_rail.tscn" id="2_mwuut"]
 [ext_resource type="Script" path="res://scripts/entity-manager.gd" id="3_ax36f"]
-[ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="3_q2jdj"]
+[ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabstemp/entity.tscn" id="3_q2jdj"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
 
