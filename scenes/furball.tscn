@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://brvfsvdd5nkmm"]
+
+[ext_resource type="Script" path="res://scripts/furball.gd" id="1_un2b0"]
+[ext_resource type="Material" uid="uid://dkn24tie3571f" path="res://materials/shell_material.tres" id="2_1dr61"]
+[ext_resource type="PackedScene" uid="uid://b60xb1eyyum7q" path="res://scenes/shell.tscn" id="2_p0rip"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_radll"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_drkxn"]
+
+[node name="Furball" type="Node3D"]
+script = ExtResource("1_un2b0")
+shell_mesh = SubResource("SphereMesh_radll")
+shell_material = ExtResource("2_1dr61")
+shell_scene = ExtResource("2_p0rip")
+shell_count = 32
+density = 80.0
+thickness = 3.5
+color = Color(0.122252, 0.122252, 0.122252, 1)
+occlusion_attenuation = 1.5
+curvature = 2.0
+
+[node name="Preview" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_drkxn")
+
+[node name="Shells" type="Node3D" parent="."]

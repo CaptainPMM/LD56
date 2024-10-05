@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dkn24tie3571f"]
+
+[ext_resource type="Shader" path="res://shaders/shell.gdshader" id="1_d6atp"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_d6atp")
+shader_parameter/u_shell_index = null
+shader_parameter/u_shell_count = null
+shader_parameter/u_density = 100.0

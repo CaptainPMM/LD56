@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b60xb1eyyum7q"]
+
+[ext_resource type="Script" path="res://scripts/shell.gd" id="1_2pkgv"]
+
+[node name="Shell" type="Node3D"]
+script = ExtResource("1_2pkgv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
