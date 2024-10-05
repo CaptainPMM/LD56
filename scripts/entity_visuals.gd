@@ -9,5 +9,5 @@ func _process(delta: float) -> void:
 	var gs = Basis.from_scale(glob_scale)
 	var dir = lerp(last_dir, -vel, delta * 5.0)
 	last_dir = dir
-	if abs(dir.x) > 0.0001 && abs(dir.z) > 0.0001:
+	if abs(dir.x) > 0.00001 && abs(dir.z) > 0.00001:
 		self.global_transform.basis = Basis.looking_at(dir) * gs
