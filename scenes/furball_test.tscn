@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://bopopj4yswu6j"]
+[gd_scene load_steps=7 format=4 uid="uid://bopopj4yswu6j"]
 
+[ext_resource type="Script" path="res://scripts/render_to_texture.gd" id="1_03rga"]
 [ext_resource type="PackedScene" uid="uid://brvfsvdd5nkmm" path="res://scenes/furball.tscn" id="1_irrov"]
-[ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="3_ku2wy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dox1y"]
 resource_name = "Material.001"
@@ -43,7 +43,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_g48ev")
 
+[sub_resource type="Environment" id="Environment_ublid"]
+background_color = Color(0, 1, 0, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.65834, 0.65834, 0.65834, 1)
+
 [node name="FurballTest" type="Node3D"]
+script = ExtResource("1_03rga")
 
 [node name="Furball" parent="." instance=ExtResource("1_irrov")]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
@@ -55,9 +61,11 @@ mesh = SubResource("ArrayMesh_u3bv8")
 skeleton = NodePath("")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.929588, 0.198224, -0.310762, 0.0299693, 0.799651, 0.599717, 0.367379, -0.566803, 0.737406, -0.0600479, 0.131656, 0.151881)
+transform = Transform3D(0.936694, 0.222477, -0.270384, 0.0132934, 0.749048, 0.662383, 0.349895, -0.624044, 0.698672, -0.045203, 0.108078, 0.116242)
+fov = 35.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.94702, 0.148834, -0.284608, 0.268659, 0.118502, 0.955918, 0.175999, -0.981736, 0.0722379, 0, 1.49467, 0)
 
-[node name="WorldEnvironment" parent="." instance=ExtResource("3_ku2wy")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ublid")
