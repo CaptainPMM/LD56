@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://7rmloop8mw4v"]
+[gd_scene load_steps=15 format=3 uid="uid://7rmloop8mw4v"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_hp732"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="1_v80il"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ban375wxxkrsp" path="res://scenes/Laserpunkt.tscn" id="6_48oc1"]
 [ext_resource type="PackedScene" uid="uid://wc25lmihuyod" path="res://prefabs/lightweighted_ball.tscn" id="7_0o4j3"]
 [ext_resource type="PackedScene" uid="uid://bnkdrv3m8vmo" path="res://prefabs/static_cube.tscn" id="8_ouhba"]
+[ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="9_ws4kd"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
 
@@ -207,6 +208,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.949912, 0.0756181, 0.634565
 
 [node name="static_cube" parent="." instance=ExtResource("8_ouhba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0536645, 0.0629986, 0.575597)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("9_ws4kd")]
 
 [editable path="Camera"]
 [editable path="CameraRail"]
