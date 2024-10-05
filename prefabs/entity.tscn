@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2jcdvai0x0s6"]
+[gd_scene load_steps=7 format=3 uid="uid://c2jcdvai0x0s6"]
 
 [ext_resource type="Script" path="res://scripts/entity.gd" id="1_1biwx"]
-
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ctt7h"]
 albedo_color = Color(0.231373, 0.286275, 1, 1)
@@ -10,6 +9,10 @@ albedo_color = Color(0.231373, 0.286275, 1, 1)
 material = SubResource("ORMMaterial3D_ctt7h")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bsj1o"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8y8s2"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7ds2b"]
 
 [node name="entity" type="RigidBody3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.0600161, 0)
@@ -22,3 +25,14 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_bsj1o")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_8y8s2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+visible = false
+mesh = SubResource("SphereMesh_7ds2b")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

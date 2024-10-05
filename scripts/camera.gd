@@ -45,9 +45,6 @@ func _handleLaser() -> void:
 		if rayResult:
 			_laserPoint.position = rayResult.position;
 	
-	# all entities will follow the laser
-	for entity in get_tree().get_nodes_in_group("entity"):
-		entity.target_position = _laserPoint.position
 
 func getXMovSpeed() -> float:
 	return _xMovSpeed
