@@ -2,7 +2,8 @@ extends Node3D
 class_name Camera
 
 @export var _xMovSpeed : float = 0.2
-@export var _railsCollMask : int = 2
+@export var _floorCollMask : int = 1 << 1 # layer 2
+@export var _railsCollMask : int = 1 << 2 # layer 3
 @export var _laserPoint : Node3D
 
 @onready var _cam : Camera3D = $Camera3D
@@ -34,7 +35,7 @@ func _handleLaser() -> void:
 	var from = get_viewport().get_camera_3d().project_ray_origin(mousePos);
 	var to = from + get_viewport().get_camera_3d().project_ray_normal(mousePos) * maxDist;
 	var castSpace  = get_viewport().world_3d.direct_space_state;
-	var rayQuery = PhysicsRayQueryParameters3D.create(from, to, ~_railsCollMask);
+	var rayQuery = PhysicsRayQueryParameters3D.create(from, to, _floorCollMask);
 	rayQuery.collide_with_areas = true;
 	var rayResult = castSpace.intersect_ray(rayQuery);
 	
