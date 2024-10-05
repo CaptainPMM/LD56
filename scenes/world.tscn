@@ -1,33 +1,101 @@
-[gd_scene load_steps=5 format=3 uid="uid://7rmloop8mw4v"]
+[gd_scene load_steps=11 format=3 uid="uid://7rmloop8mw4v"]
 
-[ext_resource type="Script" path="res://Skripts/LaserPointer.gd" id="1_1hqbf"]
+[ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="1_v80il"]
+[ext_resource type="PackedScene" uid="uid://qa6avp01dssx" path="res://prefabs/camera_rail.tscn" id="2_mwuut"]
+[ext_resource type="Script" path="res://scripts/entity-manager.gd" id="3_ax36f"]
+[ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="3_q2jdj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd5ok"]
+albedo_color = Color(0.49, 0.49, 0.49, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hb2fb"]
+size = Vector3(1000, 0.01, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gv3bx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyrdd"]
+albedo_color = Color(1, 0.42, 0.42, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_y4eco"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_t73ts"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hb2fb"]
-
 [node name="World" type="Node3D"]
 
-[node name="LaserPunkt" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -6.15904, 0.974327, -2.69484)
-mesh = SubResource("SphereMesh_y4eco")
-skeleton = NodePath("../Camera3D")
-
-[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("laserPunkt")]
-transform = Transform3D(1, 0, 0, 0, 0.945177, 0.326558, 0, -0.326558, 0.945177, 0, 0.974327, 2.44016)
-script = ExtResource("1_1hqbf")
-laserPunkt = NodePath("../LaserPunkt")
+[node name="Camera" parent="." node_paths=PackedStringArray("_laserPoint") instance=ExtResource("1_v80il")]
+_laserPoint = NodePath("../LaserPoint")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.91756, 0.342154, -0.202518, 0, 0.509357, 0.860555, 0.397596, -0.789612, 0.467366, -8.01572, 0, -1.02541)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
+shadow_enabled = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+mesh = SubResource("PlaneMesh_8htkq")
+surface_material_override/0 = SubResource("StandardMaterial3D_bd5ok")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_t73ts")
-skeleton = NodePath("../..")
+[node name="WalkableFloor" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WalkableFloor"]
 shape = SubResource("BoxShape3D_hb2fb")
+
+[node name="Mesh" type="MeshInstance3D" parent="WalkableFloor"]
+transform = Transform3D(1000, 0, 0, 0, 0.01, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_gv3bx")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyrdd")
+
+[node name="LaserPoint" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1, -10)
+mesh = SubResource("SphereMesh_y4eco")
+skeleton = NodePath("")
+
+[node name="CameraRail" parent="." instance=ExtResource("2_mwuut")]
+transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="CameraRail2" parent="." instance=ExtResource("2_mwuut")]
+transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, 3.90734, 0, 0)
+
+[node name="TestCube" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.98186, -0.0602123, 0, 0.602123, 0.998186, 0, 0, 0, 1, 1, -0.217, -1)
+mesh = SubResource("BoxMesh_gv3bx")
+
+[node name="TestObstacle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.1, 0, 0, 0, 0.2, 1, 0.05, 0)
+mesh = SubResource("BoxMesh_gv3bx")
+
+[node name="TestObstacle2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.609637, 0, 0, 0, 0.1, 0, 0, 0, 0.244357, 1.95597, 0.05, 0.219553)
+mesh = SubResource("BoxMesh_gv3bx")
+
+[node name="TestObstacle3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.282135, 0, 0, 0, 0.280906, 0, 0, 0, 0.49359, 3.4327, 0.05, 0.0107604)
+mesh = SubResource("BoxMesh_gv3bx")
+
+[node name="TestObstacle4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.1, 0, 0, 0, 0.2, 5.52181, 0.0500002, -0.128846)
+mesh = SubResource("BoxMesh_gv3bx")
+
+[node name="TestObstacle5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.609637, 0, 0, 0, 0.1, 0, 0, 0, 0.244357, 6.47778, 0.0500002, 0.0907074)
+mesh = SubResource("BoxMesh_gv3bx")
+
+[node name="TestObstacle6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.282135, 0, 0, 0, 0.280906, 0, 0, 0, 0.49359, 7.95451, 0.0500002, -0.118085)
+mesh = SubResource("BoxMesh_gv3bx")
+
+[node name="EntityManager" type="Node3D" parent="."]
+script = ExtResource("3_ax36f")
+entity_scene = ExtResource("3_q2jdj")
+
+[node name="entity" parent="." instance=ExtResource("3_q2jdj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.04727, 0.0650162, -0.154661)
+
+[node name="entity2" parent="." instance=ExtResource("3_q2jdj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.975508, 0.0650162, 0.109452)
+
+[node name="entity3" parent="." instance=ExtResource("3_q2jdj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.969305, 0.0650162, 0.329902)
+
+[editable path="CameraRail"]
+[editable path="CameraRail2"]
