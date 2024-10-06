@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=27 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://wi4361uno5um" path="res://prefabs/static_klemm_2x4.tscn" id="14_748pe"]
 [ext_resource type="PackedScene" uid="uid://ddkxixjd7te70" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
 [ext_resource type="PackedScene" uid="uid://bx1ibg6a3ldxe" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
+[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="17_jjpoh"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
 
@@ -29,6 +30,17 @@ size = Vector3(1000, 0.01, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyrdd"]
 albedo_color = Color(1, 0.42, 0.42, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbcjv"]
+bg_color = Color(0, 0, 0, 0.27451)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yst1g"]
+line_spacing = 4.0
+font_size = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfuvp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqptu"]
 
 [node name="World" type="Node3D"]
 
@@ -123,7 +135,7 @@ transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 
 transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 5.70066, 0.0650162, 0.360715)
 
 [node name="entity13" parent="." instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 9.66804, 0.0650162, 0.385861)
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 9.8572, 0.0650162, 0.410406)
 
 [node name="entity41" parent="." instance=ExtResource("5_631s3")]
 transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 9.0448, 0.0650161, 0.0403842)
@@ -238,10 +250,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.467377, 0.125807, 0)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.4662, 0.00500011, 0.0162416)
 
 [node name="End" parent="Roombas/Roomba8" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74464, 0.05, 2.23517e-08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62146, 0.05, 1.11759e-08)
 
 [node name="Start" parent="Roombas/Roomba8" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.549425, 0.05, 5.58794e-09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242275, 0.05, 3.35276e-08)
 
 [node name="Roombaa" parent="Roombas/Roomba8" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.322488, 0.125807, 5.96046e-08)
@@ -1081,6 +1093,152 @@ transform = Transform3D(-0.411686, 0, 3.53305e-08, 0, 1, 0, -3.59907e-08, 0, -0.
 transform = Transform3D(-0.596725, 0, 3.53305e-08, 0, 1, 0, -5.21673e-08, 0, -0.404133, 20.3507, 0.0629985, 0.131743)
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("11_4a6xw")]
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Win_screen" type="Panel" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gbcjv")
+
+[node name="Win_text" type="Label" parent="UI/Win_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Win win win"
+label_settings = SubResource("LabelSettings_yst1g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOver_screen" type="Panel" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gbcjv")
+
+[node name="GameOver_text" type="Label" parent="UI/GameOver_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Game over!
+You lost all Dudes.
+Press 'Space' to start again."
+label_settings = SubResource("LabelSettings_yst1g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start_screen" type="Panel" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gbcjv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Start_text" type="Label" parent="UI/Start_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Press 'Space' to start
+Try to collect as many Dudes as possible"
+label_settings = SubResource("LabelSettings_yst1g")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD" type="Node" parent="UI"]
+
+[node name="Panel" type="Panel" parent="UI/HUD"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 177.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bfuvp")
+metadata/_edit_use_anchors_ = true
+
+[node name="Score" type="Label" parent="UI/HUD/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -21.0
+offset_right = 27.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -23.5
+offset_right = 52.0
+offset_bottom = 23.5
+grow_vertical = 2
+texture = ExtResource("17_jjpoh")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Destination" type="Area3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1165, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="UI/Destination"]
+shape = SubResource("BoxShape3D_bqptu")
 
 [editable path="Camera"]
 [editable path="CameraRail3"]
