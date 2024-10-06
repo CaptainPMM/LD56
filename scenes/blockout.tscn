@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://byv3rxwcc80yx"]
+[gd_scene load_steps=33 format=3 uid="uid://byv3rxwcc80yx"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_uf6hr"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_2skt5"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ddqu5dae5aok6" path="res://prefabs/roomba.tscn" id="10_r4htx"]
 [ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="11_4sw0n"]
 [ext_resource type="PackedScene" uid="uid://c24sdcu06jxei" path="res://models/Sauger.glb" id="11_coa60"]
+[ext_resource type="PackedScene" uid="uid://bafe70tlfovvw" path="res://prefabs/suck_sound.tscn" id="11_dmdro"]
 [ext_resource type="Shader" path="res://shader/laser_point.gdshader" id="12_1cipm"]
 [ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="12_fw5fn"]
 [ext_resource type="Texture2D" uid="uid://b81q02ws3ima" path="res://textures/LaserLine.png" id="13_oe4sm"]
@@ -928,6 +929,7 @@ mass = 2.0
 script = ExtResource("10_7nk37")
 point_a = NodePath("../Start")
 point_b = NodePath("../End")
+Suck_sound_prefab = ExtResource("11_dmdro")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Roomba/Roombaa"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0336028, 0)

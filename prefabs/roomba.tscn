@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddqu5dae5aok6"]
+[gd_scene load_steps=12 format=3 uid="uid://ddqu5dae5aok6"]
 
 [ext_resource type="Script" path="res://scripts/roomba.gd" id="1_eoxgr"]
 [ext_resource type="PackedScene" uid="uid://c24sdcu06jxei" path="res://models/Sauger.glb" id="2_nwdhm"]
+[ext_resource type="PackedScene" uid="uid://bafe70tlfovvw" path="res://prefabs/suck_sound.tscn" id="2_v0e47"]
 [ext_resource type="Shader" path="res://shader/laser_point.gdshader" id="3_hs1a1"]
 [ext_resource type="Texture2D" uid="uid://b81q02ws3ima" path="res://textures/LaserLine.png" id="4_1wjrd"]
+[ext_resource type="AudioStream" uid="uid://cqf3al17sdmsx" path="res://sounds/sfx/saugen/saugen-2.WAV" id="6_kkfqa"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_y013y"]
 height = 0.1
@@ -43,6 +45,7 @@ mass = 2.0
 script = ExtResource("1_eoxgr")
 point_a = NodePath("../Start")
 point_b = NodePath("../End")
+Suck_sound_prefab = ExtResource("2_v0e47")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Roombaa"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0336028, 0)
@@ -66,6 +69,12 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.065, 0)
 [node name="Lasereinheit" type="MeshInstance3D" parent="Roombaa"]
 transform = Transform3D(-0.125, 0, -1.09278e-08, 0, 0.05, 0, 1.09278e-08, 0, -0.125, 0.134627, -0.0721198, 0)
 mesh = SubResource("BoxMesh_wkuwe")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_kkfqa")
+volume_db = -38.693
+autoplay = true
+max_distance = 2.0
 
 [connection signal="body_entered" from="Roombaa/Kill_area" to="Roombaa" method="_on_kill_area_body_entered"]
 [connection signal="body_entered" from="Roombaa/Sucking_area" to="Roombaa" method="_on_sucking_area_body_entered"]

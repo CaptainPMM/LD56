@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c2jcdvai0x0s6"]
+[gd_scene load_steps=22 format=3 uid="uid://c2jcdvai0x0s6"]
 
 [ext_resource type="Script" path="res://scripts/entity.gd" id="1_1biwx"]
 [ext_resource type="Script" path="res://scripts/entity_visuals.gd" id="2_8vn4d"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://v0881adl6jhf" path="res://sounds/sfx/footsteps/footsteps05.wav" id="9_uwe1d"]
 [ext_resource type="AudioStream" uid="uid://pise8t0vjvij" path="res://sounds/sfx/cheering/cheering (5).mp3" id="9_wfkhx"]
 [ext_resource type="AudioStream" uid="uid://bj8uysd4oaifa" path="res://sounds/sfx/cheering/cheering (6).mp3" id="10_in1oc"]
+[ext_resource type="AudioStream" uid="uid://02vka4s5uxvd" path="res://sounds/sfx/saugen/02-saugen-blop.wav" id="16_iegst"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bsj1o"]
 radius = 0.025
@@ -89,6 +90,9 @@ stream = SubResource("AudioStreamRandomizer_ke8bd")
 volume_db = -35.0
 max_db = 0.0
 max_distance = 5.0
+
+[node name="Suck_In" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("16_iegst")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 

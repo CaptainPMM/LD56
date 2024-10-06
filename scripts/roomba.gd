@@ -10,6 +10,8 @@ class_name roomba
 @export var rotation_speed = 5.0
 @export var sucking_strength = 5
 
+@export var Suck_sound_prefab : PackedScene
+
 var position_a
 var position_b 
 
@@ -75,6 +77,8 @@ func _on_kill_area_body_entered(body: Node3D) -> void:
 	if body is entity:
 		sucked_entities.erase(body)
 		body.on_map_exited()
+		var suck_sound = Suck_sound_prefab.instantiate()
+		self.add_child(suck_sound);
 		
 
 func sucking_entity(e):
