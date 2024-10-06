@@ -1,26 +1,27 @@
-[gd_scene load_steps=32 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=31 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
 [ext_resource type="PackedScene" uid="uid://qa6avp01dssx" path="res://prefabs/camera_rail.tscn" id="3_66in3"]
+[ext_resource type="PackedScene" uid="uid://brlxrla8pe636" path="res://prefabs/tisch.tscn" id="3_tmkrh"]
 [ext_resource type="Script" path="res://scripts/entity_manager.gd" id="4_wtkwh"]
 [ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="5_631s3"]
 [ext_resource type="PackedScene" uid="uid://ban375wxxkrsp" path="res://scenes/Laserpunkt.tscn" id="6_e58cy"]
-[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x6.tscn" id="7_dx3tg"]
-[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x2.tscn" id="8_gx648"]
+[ext_resource type="PackedScene" uid="uid://bsiqwex3sflv4" path="res://prefabs/static_klemm_2x6.tscn" id="7_dx3tg"]
+[ext_resource type="PackedScene" uid="uid://bfhn4xbadimpi" path="res://prefabs/static_klemm_2x2.tscn" id="8_gx648"]
 [ext_resource type="PackedScene" uid="uid://cmaeufe2tfm7f" path="res://prefabs/lightweighted_cube.tscn" id="8_pg51q"]
 [ext_resource type="PackedScene" uid="uid://wc25lmihuyod" path="res://prefabs/lightweighted_ball.tscn" id="9_pefam"]
 [ext_resource type="PackedScene" uid="uid://ddqu5dae5aok6" path="res://prefabs/roomba.tscn" id="10_wf0va"]
 [ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="11_4a6xw"]
 [ext_resource type="PackedScene" uid="uid://loj1ce2sr6lk" path="res://prefabs/static_klemm_2x5.tscn" id="13_qfc14"]
-[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x4.tscn" id="14_748pe"]
-[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
-[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
-[ext_resource type="PackedScene" path="res://prefabs/PappKiste.tscn" id="16_fvw7l"]
+[ext_resource type="PackedScene" uid="uid://wi4361uno5um" path="res://prefabs/static_klemm_2x4.tscn" id="14_748pe"]
+[ext_resource type="PackedScene" uid="uid://ddkxixjd7te70" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
+[ext_resource type="PackedScene" uid="uid://bx1ibg6a3ldxe" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
+[ext_resource type="PackedScene" uid="uid://dpy7jmwl87q8g" path="res://prefabs/PappKiste.tscn" id="16_fvw7l"]
 [ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="17_jjpoh"]
 [ext_resource type="Script" path="res://scenes/fadeOut.gd" id="18_scyaq"]
 [ext_resource type="Script" path="res://scenes/animation_component.gd" id="19_tvvcx"]
-[ext_resource type="PackedScene" uid="uid://o3g050uoyevj" path="res://prefabs/wall.tscn" id="21_nnyvy"]
+[ext_resource type="PackedScene" path="res://prefabs/wall.tscn" id="21_nnyvy"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
 
@@ -29,11 +30,6 @@ albedo_color = Color(0.49, 0.49, 0.49, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hb2fb"]
 size = Vector3(1000, 0.01, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_gv3bx"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyrdd"]
-albedo_color = Color(1, 0.42, 0.42, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
 bg_color = Color(0, 0, 0, 0.27451)
@@ -74,11 +70,26 @@ collision_mask = 3
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WalkableFloor"]
 shape = SubResource("BoxShape3D_hb2fb")
 
-[node name="Mesh" type="MeshInstance3D" parent="WalkableFloor"]
-transform = Transform3D(1000, 0, 0, 0, 0.01, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_gv3bx")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyrdd")
+[node name="tisch" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 2.5286, -1.31221, -0.000242949)
+
+[node name="tisch2" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 8.1395, -1.31221, -0.000242949)
+
+[node name="tisch3" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 13.7269, -1.31221, -0.000242949)
+
+[node name="tisch4" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 19.3378, -1.31221, -0.000242949)
+
+[node name="tisch5" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 24.9615, -1.31221, -0.000242949)
+
+[node name="tisch6" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 30.5724, -1.31221, -0.000242949)
+
+[node name="tisch7" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 36.1598, -1.31221, -0.000242949)
 
 [node name="EntityManager" type="Node3D" parent="." node_paths=PackedStringArray("laser_point", "start_entities")]
 script = ExtResource("4_wtkwh")
