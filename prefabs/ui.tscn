@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccuvwo3m1bvok"]
+[gd_scene load_steps=8 format=3 uid="uid://ccuvwo3m1bvok"]
 
-[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="1_c121a"]
+[ext_resource type="Script" path="res://scenes/fadeOut.gd" id="1_203kl"]
+[ext_resource type="Script" path="res://scenes/animation_component.gd" id="2_0yuxp"]
+[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="3_nu11d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
 bg_color = Color(0, 0, 0, 0.27451)
@@ -10,6 +12,8 @@ line_spacing = 4.0
 font_size = 30
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8m2yo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g1k3w"]
 
 [node name="UI" type="Node"]
 
@@ -72,14 +76,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Game over!
 You lost all Dudes.
-Press 'Space' to start again."
+Press to start again."
 label_settings = SubResource("LabelSettings_mqfyk")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Start_screen" type="Panel" parent="."]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -87,9 +90,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
 
-[node name="Start_text" type="Label" parent="Start_screen"]
+[node name="FadeOut" type="Node" parent="Start_screen"]
 unique_name_in_owner = true
-layout_mode = 1
+script = ExtResource("1_203kl")
+
+[node name="Start_text" type="Label" parent="Start_screen/FadeOut"]
+unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -103,8 +109,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-text = "Press 'Space' to start
-Try to collect as many Dudes as possible"
+text = "Press to start.
+Try to collect as many Dudes as possible."
 label_settings = SubResource("LabelSettings_mqfyk")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -114,24 +120,28 @@ vertical_alignment = 1
 [node name="Panel" type="Panel" parent="HUD"]
 offset_left = 15.0
 offset_top = 15.0
-offset_right = 177.0
+offset_right = 109.0
 offset_bottom = 68.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8m2yo")
+
+[node name="AnimationComponent" type="Node" parent="HUD/Panel"]
+unique_name_in_owner = true
+script = ExtResource("2_0yuxp")
 
 [node name="Score" type="Label" parent="HUD/Panel"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -27.5
-offset_top = -21.0
-offset_right = 27.5
-offset_bottom = 21.0
-grow_horizontal = 2
+offset_left = -40.0
+offset_top = -20.5
+offset_bottom = 21.5
+grow_horizontal = 0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "0"
 
@@ -144,5 +154,11 @@ offset_top = -23.5
 offset_right = 52.0
 offset_bottom = 23.5
 grow_vertical = 2
-texture = ExtResource("1_c121a")
+texture = ExtResource("3_nu11d")
 expand_mode = 1
+
+[node name="Destination" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1165, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Destination"]
+shape = SubResource("BoxShape3D_g1k3w")

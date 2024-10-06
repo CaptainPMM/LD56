@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=32 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
@@ -6,18 +6,21 @@
 [ext_resource type="Script" path="res://scripts/entity_manager.gd" id="4_wtkwh"]
 [ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="5_631s3"]
 [ext_resource type="PackedScene" uid="uid://ban375wxxkrsp" path="res://scenes/Laserpunkt.tscn" id="6_e58cy"]
-[ext_resource type="PackedScene" uid="uid://bsiqwex3sflv4" path="res://prefabs/static_klemm_2x6.tscn" id="7_dx3tg"]
-[ext_resource type="PackedScene" uid="uid://bfhn4xbadimpi" path="res://prefabs/static_klemm_2x2.tscn" id="8_gx648"]
+[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x6.tscn" id="7_dx3tg"]
+[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x2.tscn" id="8_gx648"]
 [ext_resource type="PackedScene" uid="uid://cmaeufe2tfm7f" path="res://prefabs/lightweighted_cube.tscn" id="8_pg51q"]
 [ext_resource type="PackedScene" uid="uid://wc25lmihuyod" path="res://prefabs/lightweighted_ball.tscn" id="9_pefam"]
 [ext_resource type="PackedScene" uid="uid://ddqu5dae5aok6" path="res://prefabs/roomba.tscn" id="10_wf0va"]
 [ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="11_4a6xw"]
 [ext_resource type="PackedScene" uid="uid://loj1ce2sr6lk" path="res://prefabs/static_klemm_2x5.tscn" id="13_qfc14"]
-[ext_resource type="PackedScene" uid="uid://wi4361uno5um" path="res://prefabs/static_klemm_2x4.tscn" id="14_748pe"]
-[ext_resource type="PackedScene" uid="uid://ddkxixjd7te70" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
-[ext_resource type="PackedScene" uid="uid://bx1ibg6a3ldxe" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
+[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x4.tscn" id="14_748pe"]
+[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
+[ext_resource type="PackedScene" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
 [ext_resource type="PackedScene" path="res://prefabs/PappKiste.tscn" id="16_fvw7l"]
 [ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="17_jjpoh"]
+[ext_resource type="Script" path="res://scenes/fadeOut.gd" id="18_scyaq"]
+[ext_resource type="Script" path="res://scenes/animation_component.gd" id="19_tvvcx"]
+[ext_resource type="PackedScene" uid="uid://o3g050uoyevj" path="res://prefabs/wall.tscn" id="21_nnyvy"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
 
@@ -32,14 +35,16 @@ size = Vector3(1000, 0.01, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyrdd"]
 albedo_color = Color(1, 0.42, 0.42, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbcjv"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
 bg_color = Color(0, 0, 0, 0.27451)
 
-[sub_resource type="LabelSettings" id="LabelSettings_yst1g"]
+[sub_resource type="LabelSettings" id="LabelSettings_mqfyk"]
 line_spacing = 4.0
 font_size = 30
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfuvp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8m2yo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g1k3w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bqptu"]
 
@@ -58,7 +63,7 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -0.545, 0)
 mesh = SubResource("PlaneMesh_8htkq")
 surface_material_override/0 = SubResource("StandardMaterial3D_bd5ok")
 
@@ -1403,7 +1408,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gbcjv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
 
 [node name="Win_text" type="Label" parent="UI/Win_screen"]
 unique_name_in_owner = true
@@ -1422,7 +1427,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Win win win"
-label_settings = SubResource("LabelSettings_yst1g")
+label_settings = SubResource("LabelSettings_mqfyk")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1434,7 +1439,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gbcjv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
 
 [node name="GameOver_text" type="Label" parent="UI/GameOver_screen"]
 unique_name_in_owner = true
@@ -1454,8 +1459,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Game over!
 You lost all Dudes.
-Press 'Space' to start again."
-label_settings = SubResource("LabelSettings_yst1g")
+Press to start again."
+label_settings = SubResource("LabelSettings_mqfyk")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1466,12 +1471,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gbcjv")
-metadata/_edit_use_anchors_ = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
 
-[node name="Start_text" type="Label" parent="UI/Start_screen"]
+[node name="FadeOut" type="Node" parent="UI/Start_screen"]
 unique_name_in_owner = true
-layout_mode = 1
+script = ExtResource("18_scyaq")
+
+[node name="Start_text" type="Label" parent="UI/Start_screen/FadeOut"]
+unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -1485,40 +1492,41 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-text = "Press 'Space' to start
-Try to collect as many Dudes as possible"
-label_settings = SubResource("LabelSettings_yst1g")
+text = "Press to start.
+Try to collect as many Dudes as possible."
+label_settings = SubResource("LabelSettings_mqfyk")
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="HUD" type="Node" parent="UI"]
 
 [node name="Panel" type="Panel" parent="UI/HUD"]
 offset_left = 15.0
 offset_top = 15.0
-offset_right = 177.0
+offset_right = 109.0
 offset_bottom = 68.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_bfuvp")
-metadata/_edit_use_anchors_ = true
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8m2yo")
+
+[node name="AnimationComponent" type="Node" parent="UI/HUD/Panel"]
+unique_name_in_owner = true
+script = ExtResource("19_tvvcx")
 
 [node name="Score" type="Label" parent="UI/HUD/Panel"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -27.5
-offset_top = -21.0
-offset_right = 27.5
-offset_bottom = 21.0
-grow_horizontal = 2
+offset_left = -40.0
+offset_top = -20.5
+offset_bottom = 21.5
+grow_horizontal = 0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "0"
-metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="UI/HUD/Panel"]
 layout_mode = 1
@@ -1531,16 +1539,24 @@ offset_bottom = 23.5
 grow_vertical = 2
 texture = ExtResource("17_jjpoh")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Destination" type="Area3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1165, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="UI/Destination"]
+shape = SubResource("BoxShape3D_g1k3w")
+
+[node name="Destination" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.3594, 0, 0)
 collision_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="UI/Destination"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Destination"]
 shape = SubResource("BoxShape3D_bqptu")
 
-[connection signal="body_entered" from="UI/Destination" to="GameManager" method="_on_destination_body_entered"]
+[node name="Wall" parent="." instance=ExtResource("21_nnyvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8882, 0, -1.282)
+
+[connection signal="body_entered" from="Destination" to="GameManager" method="_on_destination_body_entered"]
 
 [editable path="Camera"]
 [editable path="Level_Intro/Interactable/Roomba15"]

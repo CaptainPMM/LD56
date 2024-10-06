@@ -7,6 +7,8 @@ class_name entity_manager
 @export var start_entities: Array[entity]
 
 @onready var score_label: Label = %Score
+@onready var animation: AnimationComponent = %AnimationComponent
+
 
 var active_entities: Array[entity]
 var current_count = 0
@@ -27,6 +29,7 @@ func _on_entity_activated(_entity):
 	_entity.freeze = false
 	_entity.deactivated.connect(_on_entity_deactivated)
 	current_count += 1
+	animation.scale()
 	score_label.text = str(current_count)
 	#print("Score: " + str(current_count))
 
