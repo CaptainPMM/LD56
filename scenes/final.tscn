@@ -71,25 +71,25 @@ collision_mask = 3
 shape = SubResource("BoxShape3D_hb2fb")
 
 [node name="tisch" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
-transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 2.5286, -1.31221, -0.000242949)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 2.5286, -1.308, -0.000242949)
 
 [node name="tisch2" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
-transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 8.1395, -1.31221, -0.000242949)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 8.1395, -1.308, -0.000242949)
 
 [node name="tisch3" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
-transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 13.7269, -1.31221, -0.000242949)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 13.7269, -1.308, -0.000242949)
 
 [node name="tisch4" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
-transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 19.3378, -1.31221, -0.000242949)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 19.3378, -1.308, -0.000242949)
 
 [node name="tisch5" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
-transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 24.9615, -1.31221, -0.000242949)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 24.9615, -1.308, -0.000242949)
 
 [node name="tisch6" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
-transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 30.5724, -1.31221, -0.000242949)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 30.5724, -1.308, -0.000242949)
 
 [node name="tisch7" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
-transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 36.1598, -1.31221, -0.000242949)
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 36.1598, -1.308, -0.000242949)
 
 [node name="EntityManager" type="Node3D" parent="." node_paths=PackedStringArray("laser_point", "start_entities")]
 script = ExtResource("4_wtkwh")
