@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bj2xlqdbn0jtn" path="res://models/Russsmaenchen.glb" id="3_octns"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bsj1o"]
-radius = 0.25
+radius = 0.025
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8y8s2"]
-radius = 0.25
+radius = 0.025
 
 [sub_resource type="SphereMesh" id="SphereMesh_7ds2b"]
 radius = 0.25
@@ -20,7 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0600161, 0)
 script = ExtResource("1_1biwx")
 
 [node name="Visual" type="Node3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
 script = ExtResource("2_8vn4d")
 
 [node name="Fur" parent="Visual" instance=ExtResource("2_44iq6")]
