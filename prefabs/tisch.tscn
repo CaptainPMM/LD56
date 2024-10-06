@@ -1,9 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://brlxrla8pe636"]
+[gd_scene load_steps=5 format=4 uid="uid://brlxrla8pe636"]
 
 [ext_resource type="Texture2D" uid="uid://dnk7aax28u4l1" path="res://textures/oak_veneer_01_diff_1k.jpg" id="1_typs3"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tdnj7"]
-size = Vector3(2.01123, 1.31082, 1.99957)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4xt2"]
 resource_name = "Material"
@@ -46,15 +43,7 @@ shadow_mesh = SubResource("ArrayMesh_swvrp")
 
 [node name="tisch" type="Node3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00590867, 0.662227, -0.018219)
-shape = SubResource("BoxShape3D_tdnj7")
-
-[node name="Cube_003" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="Cube_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.33437, 0, -0.194454)
 mesh = SubResource("ArrayMesh_62d4c")
 skeleton = NodePath("")
