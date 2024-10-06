@@ -11,27 +11,31 @@ var current_count = 0
 
 func _process(delta: float) -> void:
 	# all entities will follow the laser
-	for entity in active_entities:
-		entity.target_position = laser_point.position
+	for _entity in active_entities:
+		_entity.target_position = laser_point.position
 
-func _on_entity_activated(entity):
-	active_entities.append(entity)
-	entity.is_active = true
-	entity.deactivated.connect(_on_entity_deactivated)
+func _on_entity_activated(_entity):
+	if _entity.is_active:
+		return
+	active_entities.append(_entity)
+	_entity.is_active = true
+	_entity.deactivated.connect(_on_entity_deactivated)
 	current_count += 1
 	print("Score: " + str(current_count))
 	
-func _on_entity_deactivated(entity):
-	active_entities.erase(entity)
-	entity.is_active = false
+func _on_entity_deactivated(_entity):
+	active_entities.erase(_entity)
+	_entity.is_active = false
 	current_count -= 1
 	print("Score: " + str(current_count))
+	_entity.queue_free()
 	
 func activate_start_entities():
-	for entity in start_entities:
-		_on_entity_activated(entity)
-	for entity in get_tree().get_nodes_in_group("entity"):
-		entity.activated.connect(_on_entity_activated)
+	#print("often started?")
+	for _entity in start_entities:
+		_on_entity_activated(_entity)
+	for _entity in get_tree().get_nodes_in_group("entity"):
+		_entity.activated.connect(_on_entity_activated)
 	
 func instantiate_random():
 	for i in range(50):

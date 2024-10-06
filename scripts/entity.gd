@@ -137,3 +137,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 func on_map_exited():
 	if is_active:
 		emit_signal("deactivated", self)
+	else:
+		queue_free()
