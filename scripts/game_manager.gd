@@ -13,7 +13,7 @@ func _ready() -> void:
 	_cam.setMouseInputs(false)
 
 # ONLY FOR TESTING: should be moved to a UI controller or similar that calls startGame from there on space press
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_SPACE):
 		startGame()
 

@@ -25,7 +25,7 @@ func _ready():
 	target_position = position_b
 	target_rotation_y = PI
 
-func _physics_process(delta : float):
+func _physics_process(_delta : float):
 	if !is_activated:
 		return
 	
@@ -39,8 +39,8 @@ func _physics_process(delta : float):
 	var brake_force = -linear_velocity * (1.0 - braking_factor)
 	apply_central_force(brake_force)
 	
-	for entity in sucked_entities:
-		sucking_entity(entity)
+	for e in sucked_entities:
+		sucking_entity(e)
 
 	if is_target_reached():
 		rotate_and_turn()
@@ -77,14 +77,14 @@ func _on_kill_area_body_entered(body: Node3D) -> void:
 		body.on_map_exited()
 		
 
-func sucking_entity(entity):
-	if entity == null: # maybe it died anoutehr way
-		sucked_entities.erase(entity)
+func sucking_entity(e):
+	if e == null: # maybe it died anoutehr way
+		sucked_entities.erase(e)
 		return
-	var direction = global_transform.origin - entity.global_transform.origin
+	var direction = global_transform.origin - e.global_transform.origin
 	var distance = direction.length()
 	var force = direction.normalized() * sucking_strength / distance
-	entity.apply_central_force(force)
+	e.apply_central_force(force)
 
 
 func _on_sucking_area_body_exited(body: Node3D) -> void:
