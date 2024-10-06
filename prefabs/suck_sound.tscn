@@ -6,4 +6,6 @@
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("1_un8bc")
+volume_db = -25.0
 autoplay = true
+max_distance = 5.0

@@ -22,7 +22,7 @@ func _ready() -> void:
 
 # ONLY FOR TESTING: should be moved to a UI controller or similar that calls startGame from there on space press
 func _input(_event: InputEvent) -> void:
-	if Input.is_key_pressed(KEY_SPACE):
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		# wait one frame before starting the game, because otherwise every dude on the map
 		# will instantly run to the mouse cursor
 		await get_tree().process_frame

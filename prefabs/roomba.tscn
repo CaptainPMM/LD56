@@ -72,9 +72,9 @@ mesh = SubResource("BoxMesh_wkuwe")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("6_kkfqa")
-volume_db = -38.693
+volume_db = -33.0
 autoplay = true
-max_distance = 2.0
+max_distance = 3.0
 
 [connection signal="body_entered" from="Roombaa/Kill_area" to="Roombaa" method="_on_kill_area_body_entered"]
 [connection signal="body_entered" from="Roombaa/Sucking_area" to="Roombaa" method="_on_sucking_area_body_entered"]
