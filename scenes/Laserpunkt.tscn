@@ -7,12 +7,13 @@
 render_priority = 0
 shader = ExtResource("1_b8qhm")
 shader_parameter/albedo = Color(1, 1, 1, 0.980392)
-shader_parameter/scale_mod = 1.0
+shader_parameter/scale_mod = 4.0
 shader_parameter/cube_half_size = 1.0
 shader_parameter/texture_albedo = ExtResource("2_gscib")
 
 [sub_resource type="BoxMesh" id="BoxMesh_k4urj"]
 material = SubResource("ShaderMaterial_0uar5")
+size = Vector3(0.25, 0.25, 0.25)
 
 [node name="LaserPoint" type="Node3D"]
 

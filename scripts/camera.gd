@@ -27,10 +27,10 @@ func _physics_process(_delta: float) -> void:
 		position.y = max(0, result.position.y)
 	else:
 		position.y = 0
-	
+
 func _positionCam() -> void:
 	_cam.look_at(position)
-	
+
 func _handleLaser() -> void:
 	if _mouseInputs:
 		var mousePos = get_viewport().get_mouse_position();
@@ -38,7 +38,7 @@ func _handleLaser() -> void:
 		var from = get_viewport().get_camera_3d().project_ray_origin(mousePos);
 		var to = from + get_viewport().get_camera_3d().project_ray_normal(mousePos) * maxDist;
 		var castSpace  = get_viewport().world_3d.direct_space_state;
-		var rayQuery = PhysicsRayQueryParameters3D.create(from, to, _floorCollMask);
+		var rayQuery = PhysicsRayQueryParameters3D.create(from, to);
 		rayQuery.collide_with_areas = true;
 		var rayResult = castSpace.intersect_ray(rayQuery);
 		

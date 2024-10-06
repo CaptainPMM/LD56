@@ -69,6 +69,7 @@ visible = false
 shape = SubResource("SphereShape3D_bsj1o")
 
 [node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_8y8s2")

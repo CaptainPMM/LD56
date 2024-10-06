@@ -32,8 +32,6 @@ void fragment() {
 		discard;
 	}
 	
-	
-	
-	ALBEDO = texture(texture_albedo, (-test_pos.xz * scale_mod) + 0.5).rgb * albedo.rgb;
-	ALPHA = texture(texture_albedo, (-test_pos.xz * scale_mod) + 0.5).a * albedo.a;
+	ALBEDO = texture(texture_albedo, (-test_pos.xz * scale_mod) + 0.5).rgb * albedo.rgb * 10.0;
+	ALPHA = texture(texture_albedo, (-test_pos.xz * scale_mod) + 0.5).a * albedo.a * 1.3;
 }
