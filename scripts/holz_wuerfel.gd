@@ -15,7 +15,10 @@ func _ready() -> void:
 	$S5.text = String.chr(num);
 	$S6.text = String.chr(num);
 	
-	$Cube.mesh.surface_get_material(1).albedo_color = Color(rng.randi_range(1, 4) / 4.0, rng.randi_range(1, 4) / 4.0, rng.randi_range(1, 4) / 4.0)
+	var old_mat = $Cube.mesh.surface_get_material(1).duplicate();
+	old_mat.albedo_color = Color(rng.randi_range(1, 4) / 4.0, rng.randi_range(1, 4) / 4.0, rng.randi_range(1, 4) / 4.0)
+	
+	$Cube.set_surface_override_material(1, old_mat);
 	
 	pass # Replace with function body.
 
