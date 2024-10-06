@@ -4,17 +4,17 @@
 [ext_resource type="Script" path="res://scripts/entity_visuals.gd" id="2_8vn4d"]
 [ext_resource type="PackedScene" uid="uid://brvfsvdd5nkmm" path="res://scenes/furball.tscn" id="2_44iq6"]
 [ext_resource type="PackedScene" uid="uid://bj2xlqdbn0jtn" path="res://models/Russsmaenchen.glb" id="3_octns"]
-[ext_resource type="AudioStream" uid="uid://cs3p3jc6qocvf" path="res://sounds/sfx/cheering/cheering (1).mp3" id="5_5r2he"]
 [ext_resource type="AudioStream" uid="uid://yf38m38e05qs" path="res://sounds/sfx/footsteps/footsteps01.wav" id="5_cxgjx"]
-[ext_resource type="AudioStream" uid="uid://iy2qluec57br" path="res://sounds/sfx/cheering/cheering (2).mp3" id="6_2ooh0"]
 [ext_resource type="AudioStream" uid="uid://dqa2wx5f72mk6" path="res://sounds/sfx/footsteps/footsteps02.wav" id="6_kyr1f"]
-[ext_resource type="AudioStream" uid="uid://bhwsnm8vb4ohl" path="res://sounds/sfx/cheering/cheering (3).mp3" id="7_4jhmf"]
 [ext_resource type="AudioStream" uid="uid://b1lin47nfpxm6" path="res://sounds/sfx/footsteps/footsteps03.wav" id="7_8sg45"]
 [ext_resource type="AudioStream" uid="uid://dg7kdv6y5ee26" path="res://sounds/sfx/footsteps/footsteps04.wav" id="8_j6ds4"]
-[ext_resource type="AudioStream" uid="uid://bul05sw5ykit4" path="res://sounds/sfx/cheering/cheering (4).mp3" id="8_sueon"]
 [ext_resource type="AudioStream" uid="uid://v0881adl6jhf" path="res://sounds/sfx/footsteps/footsteps05.wav" id="9_uwe1d"]
-[ext_resource type="AudioStream" uid="uid://pise8t0vjvij" path="res://sounds/sfx/cheering/cheering (5).mp3" id="9_wfkhx"]
-[ext_resource type="AudioStream" uid="uid://bj8uysd4oaifa" path="res://sounds/sfx/cheering/cheering (6).mp3" id="10_in1oc"]
+[ext_resource type="AudioStream" uid="uid://cixss5vvcppnn" path="res://sounds/sfx/cheering/cheering1.wav" id="10_ao1ne"]
+[ext_resource type="AudioStream" uid="uid://bgc0vg6djroxb" path="res://sounds/sfx/cheering/cheering2.wav" id="11_m4588"]
+[ext_resource type="AudioStream" uid="uid://c30agl0iv58f1" path="res://sounds/sfx/cheering/cheering3.wav" id="12_h0n1t"]
+[ext_resource type="AudioStream" uid="uid://c5fwna5iglxi7" path="res://sounds/sfx/cheering/cheering4.wav" id="13_smesx"]
+[ext_resource type="AudioStream" uid="uid://ku5d37b7cdct" path="res://sounds/sfx/cheering/cheering5.wav" id="14_hge82"]
+[ext_resource type="AudioStream" uid="uid://ctf0cpgvwcyll" path="res://sounds/sfx/cheering/cheering6.wav" id="15_53pbg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bsj1o"]
 radius = 0.025
@@ -40,12 +40,12 @@ stream_4/stream = ExtResource("9_uwe1d")
 random_pitch = 1.3
 random_volume_offset_db = 0.75
 streams_count = 6
-stream_0/stream = ExtResource("5_5r2he")
-stream_1/stream = ExtResource("6_2ooh0")
-stream_2/stream = ExtResource("7_4jhmf")
-stream_3/stream = ExtResource("8_sueon")
-stream_4/stream = ExtResource("9_wfkhx")
-stream_5/stream = ExtResource("10_in1oc")
+stream_0/stream = ExtResource("10_ao1ne")
+stream_1/stream = ExtResource("11_m4588")
+stream_2/stream = ExtResource("12_h0n1t")
+stream_3/stream = ExtResource("13_smesx")
+stream_4/stream = ExtResource("14_hge82")
+stream_5/stream = ExtResource("15_53pbg")
 
 [node name="entity" type="RigidBody3D" node_paths=PackedStringArray("footsteps", "cheering")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0600161, 0)
