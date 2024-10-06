@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=30 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="17_jjpoh"]
 [ext_resource type="Script" path="res://scenes/fadeOut.gd" id="18_scyaq"]
 [ext_resource type="Script" path="res://scenes/animation_component.gd" id="19_tvvcx"]
-[ext_resource type="PackedScene" path="res://prefabs/wall.tscn" id="21_nnyvy"]
+[ext_resource type="PackedScene" uid="uid://bwn3ex6yjchm2" path="res://prefabs/wall.tscn" id="21_nnyvy"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
 
@@ -39,8 +39,6 @@ line_spacing = 4.0
 font_size = 30
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8m2yo"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_g1k3w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bqptu"]
 
@@ -1550,12 +1548,6 @@ offset_bottom = 23.5
 grow_vertical = 2
 texture = ExtResource("17_jjpoh")
 expand_mode = 1
-
-[node name="Destination" type="Area3D" parent="UI"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1165, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="UI/Destination"]
-shape = SubResource("BoxShape3D_g1k3w")
 
 [node name="Destination" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.3594, 0, 0)
