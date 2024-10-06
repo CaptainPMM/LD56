@@ -21,5 +21,3 @@ displacement_strength = 0.2
 
 [node name="Preview" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_keniw")
-
-[node name="Shells" type="Node3D" parent="."]

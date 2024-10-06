@@ -9,7 +9,7 @@ class_name entity_manager
 var active_entities: Array[entity]
 var current_count = 0
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# all entities will follow the laser
 	for _entity in active_entities:
 		_entity.target_position = laser_point.position

@@ -95,35 +95,34 @@ transform = Transform3D(0.282135, 0, 0, 0, 0.280906, 0, 0, 0, 0.49359, 7.95451, 
 visible = false
 mesh = SubResource("BoxMesh_gv3bx")
 
-[node name="EntityManager" type="Node3D" parent="." node_paths=PackedStringArray("laser_point", "start_entities")]
+[node name="EntityManager" type="Node3D" parent="." node_paths=PackedStringArray("laser_point")]
 script = ExtResource("3_ax36f")
 entity_scene = ExtResource("5_016fe")
 laser_point = NodePath("../LaserPoint")
-start_entities = [NodePath("../entity"), NodePath("../entity2"), NodePath("../entity3")]
 
 [node name="entity" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.065, -0.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.065, -0.1)
 
 [node name="entity2" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.065, 0.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.065, 0.1)
 
 [node name="entity3" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1, 0.065, 0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.065, 0.3)
 
 [node name="entity4" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.237168, 0.0650162, -0.366448)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.237168, 0.0650162, -0.366448)
 
 [node name="entity5" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.282894, 0.0650162, 0.000990093)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282894, 0.0650162, 0.000990093)
 
 [node name="entity6" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.00207, 0.0650162, 0.0196764)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00207, 0.0650162, 0.0196764)
 
 [node name="entity7" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.137705, 0.0650162, 0.0204588)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.137705, 0.0650162, 0.0204588)
 
 [node name="entity8" parent="." instance=ExtResource("5_016fe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.216132, 0.0650162, -0.0630758)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.216132, 0.0650162, -0.0630758)
 
 [node name="LaserPoint" parent="." instance=ExtResource("6_48oc1")]
 transform = Transform3D(0.245, 0, 0, 0, 0.157483, -0.187681, 0, 0.187681, 0.157483, 0.0206238, 0.0812397, -0.467137)

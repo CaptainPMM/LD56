@@ -1,5 +1,7 @@
 extends RigidBody3D
 
+class_name roomba
+
 @export var speed = 1.0
 @export var point_a : Node3D 
 @export var point_b : Node3D
@@ -14,6 +16,7 @@ var position_b
 var target_position = Vector3()
 var target_rotation_y
 var sucked_entities : Array[entity]
+var is_activated: bool
 
 func _ready():
 	position_a = Vector3(point_a.global_transform.origin.x, global_transform.origin.y, point_a.global_transform.origin.z )
@@ -22,7 +25,9 @@ func _ready():
 	target_position = position_b
 	target_rotation_y = PI
 
-func _integrate_forces(state):
+func _physics_process(_delta : float):
+	if !is_activated:
+		return
 	
 	var direction_vector = (target_position - global_transform.origin).normalized()
 	direction_vector.y = 0
@@ -34,8 +39,8 @@ func _integrate_forces(state):
 	var brake_force = -linear_velocity * (1.0 - braking_factor)
 	apply_central_force(brake_force)
 	
-	for entity in sucked_entities:
-		sucking_entity(entity)
+	for e in sucked_entities:
+		sucking_entity(e)
 
 	if is_target_reached():
 		rotate_and_turn()
@@ -68,21 +73,21 @@ func _on_sucking_area_body_entered(body: Node3D) -> void:
 
 func _on_kill_area_body_entered(body: Node3D) -> void:
 	if body is entity:
-		#print(body.name + " killed")
 		sucked_entities.erase(body)
 		body.on_map_exited()
 		
 
-func sucking_entity(entity):
-	if entity == null: # maybe it died anoutehr way
-		sucked_entities.erase(entity)
+func sucking_entity(e):
+	if e == null: # maybe it died anoutehr way
+		sucked_entities.erase(e)
 		return
-	var direction = global_transform.origin - entity.global_transform.origin
+	var direction = global_transform.origin - e.global_transform.origin
 	var distance = direction.length()
 	var force = direction.normalized() * sucking_strength / distance
-	entity.apply_central_force(force)
+	e.apply_central_force(force)
 
 
 func _on_sucking_area_body_exited(body: Node3D) -> void:
 	if body is entity:
 		sucked_entities.erase(body)
+		

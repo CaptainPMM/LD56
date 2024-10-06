@@ -31,13 +31,12 @@ var log_timer = 0.0
 
 func _init() -> void:
 	self.add_to_group("entity")
-	
+
 func _ready():
 	$Area3D.scale = Vector3(cohesion_radius, cohesion_radius, cohesion_radius)
-	freeze = true
+	# freeze = true  # not sure if needed
 	audio_timer = randi_range(0, 30)
 	old_pos = global_position
-	
 
 func _physics_process(delta):
 	if not is_active:
@@ -142,10 +141,10 @@ func calculate_cohesion_force() -> Vector3:
 
 func get_neighbors(radius: float) -> Array:
 	var neighbors = []
-	for entity in get_tree().get_nodes_in_group("entity"):
-		if entity != self:
-			if global_transform.origin.distance_to(entity.global_transform.origin) < radius:
-				neighbors.append(entity)
+	for e in get_tree().get_nodes_in_group("entity"):
+		if e != self:
+			if global_transform.origin.distance_to(e.global_transform.origin) < radius:
+				neighbors.append(e)
 	return neighbors
 
 

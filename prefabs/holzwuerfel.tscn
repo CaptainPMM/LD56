@@ -50,10 +50,4 @@ text = "A"
 font_size = 256
 outline_size = 0
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.48897)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.704077, 0.710124, 0, -0.710124, 0.704077, -5.99578, 0, 0)
-
 [editable path="HolzWuerfel"]
