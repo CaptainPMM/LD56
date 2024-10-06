@@ -24,10 +24,6 @@ window/per_pixel_transparency/allowed=true
 
 project/assembly_name="LD56"
 
-[physics]
-
-3d/physics_engine="JoltPhysics3D"
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
