@@ -6,8 +6,12 @@ class_name entity_manager
 @export var laser_point: Node3D
 @export var start_entities: Array[entity]
 
+@onready var score_label: Label = %Score
+
 var active_entities: Array[entity]
 var current_count = 0
+
+signal game_over
 
 func _process(_delta: float) -> void:
 	# all entities will follow the laser
@@ -22,7 +26,9 @@ func _on_entity_activated(_entity):
 	_entity.freeze = false
 	_entity.deactivated.connect(_on_entity_deactivated)
 	current_count += 1
-	print("Score: " + str(current_count))
+	score_label.text = str(current_count)
+	#print("Score: " + str(current_count))
+
 	for e in active_entities:
 		if randf() < 0.66:
 			e.cheer()
@@ -31,8 +37,13 @@ func _on_entity_deactivated(_entity):
 	active_entities.erase(_entity)
 	_entity.is_active = false
 	current_count -= 1
-	print("Score: " + str(current_count))
+	score_label.text = str(current_count)
+	#print("Score: " + str(current_count))
 	_entity.queue_free()
+	
+	if current_count == 0:
+		game_over.emit()
+	
 	
 func activate_start_entities():
 	#print("often started?")

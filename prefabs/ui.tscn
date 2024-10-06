@@ -1,0 +1,148 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccuvwo3m1bvok"]
+
+[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="1_c121a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
+bg_color = Color(0, 0, 0, 0.27451)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqfyk"]
+line_spacing = 4.0
+font_size = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8m2yo"]
+
+[node name="UI" type="Node"]
+
+[node name="Win_screen" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
+
+[node name="Win_text" type="Label" parent="Win_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Win win win"
+label_settings = SubResource("LabelSettings_mqfyk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOver_screen" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
+
+[node name="GameOver_text" type="Label" parent="GameOver_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Game over!
+You lost all Dudes.
+Press 'Space' to start again."
+label_settings = SubResource("LabelSettings_mqfyk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start_screen" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
+
+[node name="Start_text" type="Label" parent="Start_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Press 'Space' to start
+Try to collect as many Dudes as possible"
+label_settings = SubResource("LabelSettings_mqfyk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="HUD"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 177.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8m2yo")
+
+[node name="Score" type="Label" parent="HUD/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -21.0
+offset_right = 27.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -23.5
+offset_right = 52.0
+offset_bottom = 23.5
+grow_vertical = 2
+texture = ExtResource("1_c121a")
+expand_mode = 1

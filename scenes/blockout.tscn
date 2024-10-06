@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://byv3rxwcc80yx"]
+[gd_scene load_steps=23 format=3 uid="uid://byv3rxwcc80yx"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_uf6hr"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_2skt5"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bnkdrv3m8vmo" path="res://prefabs/static_cube.tscn" id="8_cm76d"]
 [ext_resource type="PackedScene" uid="uid://ddqu5dae5aok6" path="res://prefabs/roomba.tscn" id="10_r4htx"]
 [ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="11_4sw0n"]
+[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="12_fw5fn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
 
@@ -27,6 +28,17 @@ albedo_color = Color(1, 0.42, 0.42, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8hjbg"]
 size = Vector3(1, 0.1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
+bg_color = Color(0, 0, 0, 0.27451)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqfyk"]
+line_spacing = 4.0
+font_size = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8m2yo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g1k3w"]
 
 [node name="World" type="Node3D"]
 
@@ -973,6 +985,149 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.063
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.280042, 0.05, 0)
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("11_4sw0n")]
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Win_screen" type="Panel" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
+
+[node name="Win_text" type="Label" parent="UI/Win_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Win win win"
+label_settings = SubResource("LabelSettings_mqfyk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOver_screen" type="Panel" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
+
+[node name="GameOver_text" type="Label" parent="UI/GameOver_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Game over!
+You lost all Dudes.
+Press 'Space' to start again."
+label_settings = SubResource("LabelSettings_mqfyk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start_screen" type="Panel" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg1a2")
+
+[node name="Start_text" type="Label" parent="UI/Start_screen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -106.0
+offset_right = 355.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Press 'Space' to start
+Try to collect as many Dudes as possible"
+label_settings = SubResource("LabelSettings_mqfyk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HUD" type="Node" parent="UI"]
+
+[node name="Panel" type="Panel" parent="UI/HUD"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 177.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8m2yo")
+
+[node name="Score" type="Label" parent="UI/HUD/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -21.0
+offset_right = 27.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -23.5
+offset_right = 52.0
+offset_bottom = 23.5
+grow_vertical = 2
+texture = ExtResource("12_fw5fn")
+expand_mode = 1
+
+[node name="Destination" type="Area3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1165, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="UI/Destination"]
+shape = SubResource("BoxShape3D_g1k3w")
+
+[connection signal="body_entered" from="UI/Destination" to="GameManager" method="_on_destination_body_entered"]
 
 [editable path="Camera"]
 [editable path="CameraRail"]
