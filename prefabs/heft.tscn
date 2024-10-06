@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqbl17yk58hye"]
+
+[ext_resource type="PackedScene" uid="uid://dsbarmnmau8cq" path="res://models/Heft.glb" id="1_cnisa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7lh1"]
+size = Vector3(2.00108, 0.037522, 3.19)
+
+[node name="heft" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Heft" parent="StaticBody3D" instance=ExtResource("1_cnisa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0286699, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00245368, -0.0284436, 0)
+shape = SubResource("BoxShape3D_j7lh1")
