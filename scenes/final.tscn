@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=28 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://wi4361uno5um" path="res://prefabs/static_klemm_2x4.tscn" id="14_748pe"]
 [ext_resource type="PackedScene" uid="uid://ddkxixjd7te70" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
 [ext_resource type="PackedScene" uid="uid://bx1ibg6a3ldxe" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
+[ext_resource type="PackedScene" path="res://prefabs/PappKiste.tscn" id="16_fvw7l"]
 [ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="17_jjpoh"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
@@ -148,7 +149,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67362, 0.0567736, -0.183104
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.76407, 0.0567736, -0.398572)
 
 [node name="StaticKlemm2x25" parent="Level_Intro/Geometry" instance=ExtResource("14_748pe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56274, 0.157644, -0.398572)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56274, 0.153102, -0.398572)
 
 [node name="StaticKlemm2x18" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38464, 0.0589464, 0.393873)
@@ -157,7 +158,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38464, 0.0589464, 0.393873)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38464, 0.0589464, -0.0160122)
 
 [node name="StaticKlemm2x26" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.26089, 0.16092, -0.400459)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.26072, 0.153681, -0.399345)
 
 [node name="StaticKlemm2x21" parent="Level_Intro/Geometry" instance=ExtResource("7_dx3tg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25609, 0.0504408, -0.400466)
@@ -215,6 +216,36 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.3459
 
 [node name="StaticKlemm2x32" parent="Level_Intro/Geometry" instance=ExtResource("7_dx3tg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96831, 0.0545018, 0.290799)
+
+[node name="StaticKlemm2x6" parent="Level_Intro/Geometry" instance=ExtResource("14_748pe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31236, 0.159222, -0.405374)
+
+[node name="StaticKlemm2x52" parent="Level_Intro/Geometry" instance=ExtResource("14_748pe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0972, 0.159222, -0.405374)
+
+[node name="StaticKlemm2x49" parent="Level_Intro/Geometry" instance=ExtResource("14_748pe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48966, 0.159222, -0.405374)
+
+[node name="StaticKlemm2x54" parent="Level_Intro/Geometry" instance=ExtResource("14_748pe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.83151, 0.159222, -0.405374)
+
+[node name="StaticKlemm2x46" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410163, 0.158012, -0.205843)
+
+[node name="StaticKlemm2x51" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406405, 0.158012, 0.393454)
+
+[node name="StaticKlemm2x47" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410163, 0.25964, -0.403586)
+
+[node name="StaticKlemm2x50" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.58376, 0.25964, -0.403586)
+
+[node name="StaticKlemm2x53" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09429, 0.25964, -0.403586)
+
+[node name="StaticKlemm2x48" parent="Level_Intro/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410163, 0.361654, -0.403586)
 
 [node name="Interactable" type="Node" parent="Level_Intro"]
 
@@ -326,356 +357,6 @@ transform = Transform3D(0.49876, 0, -0.86674, 0, 1, 0, 0.86674, 0, 0.49876, 1.69
 [node name="entity8" parent="Level_Intro/Interactable" instance=ExtResource("5_631s3")]
 transform = Transform3D(-0.6734, 0, -0.739279, 0, 1, 0, 0.739279, 0, -0.6734, 1.13874, 0.0650162, 0.417191)
 
-[node name="Level_Ballpit" type="Node" parent="."]
-
-[node name="Geometry" type="Node" parent="Level_Ballpit"]
-
-[node name="StaticKlemm2x1" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9896, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x2" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.1903, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x3" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.3934, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x6" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.594, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x7" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.7957, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x8" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.9963, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x9" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.1972, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x10" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.3979, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x11" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5984, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x12" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.7991, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x13" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.0014, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x14" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.202, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x15" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.4029, 0.0657745, 0.453293)
-
-[node name="StaticKlemm2x18" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9896, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x19" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.1903, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x20" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.3934, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x21" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.594, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x22" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.7957, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x23" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.9963, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x24" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.1972, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x25" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.3979, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x26" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5984, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x27" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.7991, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x28" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.0014, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x29" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.202, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x30" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.4029, 0.0657745, -0.437495)
-
-[node name="StaticKlemm2x31" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.0904, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x57" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.8904, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x32" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.2911, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x33" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.4942, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x34" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.6949, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x35" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.8965, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x36" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0972, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x37" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.2981, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x38" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.4987, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x39" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.6992, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x40" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.8999, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x41" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.1022, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x42" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.3029, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x43" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.5037, 0.17105, -0.437495)
-
-[node name="StaticKlemm2x44" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.0904, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x58" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.8899, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x45" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.2911, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x46" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.4942, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x47" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.6949, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x48" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.8965, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x49" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0972, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x50" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.2981, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x51" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.4987, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x52" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.6992, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x53" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.8999, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x54" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.1022, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x55" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.3029, 0.17105, 0.451208)
-
-[node name="StaticKlemm2x4" parent="Level_Ballpit/Geometry" instance=ExtResource("14_748pe")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7934, 0.0617019, 0.300272)
-
-[node name="StaticKlemm2x17" parent="Level_Ballpit/Geometry" instance=ExtResource("14_748pe")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.5956, 0.0617019, -0.29475)
-
-[node name="StaticKlemm2x5" parent="Level_Ballpit/Geometry" instance=ExtResource("14_748pe")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7934, 0.0617019, -0.287454)
-
-[node name="StaticKlemm2x59" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7942, 0.164144, 0.248773)
-
-[node name="StaticKlemm2x60" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7942, 0.164144, -0.240714)
-
-[node name="StaticKlemm2x61" parent="Level_Ballpit/Geometry" instance=ExtResource("7_dx3tg")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7953, 0.26368, 0.00826257)
-
-[node name="StaticKlemm2x62" parent="Level_Ballpit/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7965, 0.366206, 0.00673658)
-
-[node name="StaticKlemm2x64" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.5927, 0.164144, -0.240714)
-
-[node name="StaticKlemm2x16" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.6, 0.0655669, 0.353969)
-
-[node name="StaticKlemm2x56" parent="Level_Ballpit/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5927, 0.264393, -0.0926139)
-
-[node name="StaticKlemm2x63" parent="Level_Ballpit/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5927, 0.356596, 0.014092)
-
-[node name="Interactable" type="Node" parent="Level_Ballpit"]
-
-[node name="Roomba8" parent="Level_Ballpit/Interactable" instance=ExtResource("10_wf0va")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.7976, 0.00500011, 0.0162416)
-
-[node name="End" parent="Level_Ballpit/Interactable/Roomba8" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62146, 0.05, 1.11759e-08)
-
-[node name="Start" parent="Level_Ballpit/Interactable/Roomba8" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242275, 0.05, 3.35276e-08)
-
-[node name="Roombaa" parent="Level_Ballpit/Interactable/Roomba8" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.322488, 0.125807, 5.96046e-08)
-
-[node name="lightweighted_cube33" parent="Level_Ballpit/Interactable" instance=ExtResource("8_pg51q")]
-transform = Transform3D(0.465614, 0, 0.884988, 0, 1, 0, -0.884988, 0, 0.465614, 23.4364, 0.0754924, -0.380573)
-
-[node name="lightweighted_cube34" parent="Level_Ballpit/Interactable" instance=ExtResource("8_pg51q")]
-transform = Transform3D(0.852313, -0.00269854, 0.523026, 0.00163304, 0.999996, 0.00249832, -0.52303, -0.00127525, 0.852313, 23.554, 0.0754925, -0.288401)
-
-[node name="lightweighted_ball2" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5164, 0.13123, -0.157152)
-
-[node name="lightweighted_ball3" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9351, 0.13123, -0.223054)
-
-[node name="lightweighted_ball4" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.805, 0.13123, -0.0392317)
-
-[node name="lightweighted_ball5" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6144, 0.13123, 0.0902682)
-
-[node name="lightweighted_ball6" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4732, 0.13123, 0.264496)
-
-[node name="lightweighted_ball23" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2487, 0.13123, -0.157152)
-
-[node name="lightweighted_ball24" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3468, 0.13123, 0.0902682)
-
-[node name="lightweighted_ball26" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2056, 0.13123, 0.264496)
-
-[node name="lightweighted_ball7" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7215, 0.13123, 0.284006)
-
-[node name="lightweighted_ball8" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9233, 0.13123, 0.194143)
-
-[node name="lightweighted_ball9" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.058, 0.203149, -0.042443)
-
-[node name="lightweighted_ball10" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.263, 0.13123, -0.259007)
-
-[node name="lightweighted_ball11" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2605, 0.13123, -0.0243405)
-
-[node name="lightweighted_ball12" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1454, 0.13123, 0.229956)
-
-[node name="lightweighted_ball14" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3458, 0.13123, 0.289219)
-
-[node name="lightweighted_ball15" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5101, 0.13123, -0.202164)
-
-[node name="lightweighted_ball16" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.131, 0.186697, 0.0634867)
-
-[node name="lightweighted_ball17" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.564, 0.13123, 0.276626)
-
-[node name="lightweighted_ball18" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7138, 0.184754, 0.0812069)
-
-[node name="lightweighted_ball19" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7898, 0.13123, -0.16183)
-
-[node name="lightweighted_ball20" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.007, 0.13123, -0.190772)
-
-[node name="lightweighted_ball21" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.8274, 0.13123, 0.278143)
-
-[node name="lightweighted_ball22" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0298, 0.13123, 0.297161)
-
-[node name="lightweighted_ball25" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.9674, 0.13123, 0.0573723)
-
-[node name="lightweighted_ball27" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1985, 0.13123, -0.0591097)
-
-[node name="lightweighted_ball28" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2243, 0.13123, 0.174379)
-
-[node name="entity19" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 23.988, 0.0650163, -0.249608)
-
-[node name="entity42" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.0902, 0.0650164, -0.296318)
-
-[node name="entity22" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.7595, 0.0650162, -0.298268)
-
-[node name="entity23" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.9169, 0.0650162, 0.330803)
-
-[node name="entity24" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.71, 0.0650162, -0.266753)
-
-[node name="entity25" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.1119, 0.0650162, -0.273945)
-
-[node name="entity26" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.7229, 0.0650162, 0.346072)
-
-[node name="entity20" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.0298, 0.0650162, 0.314915)
-
-[node name="entity27" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.6786, 0.0650162, -0.278717)
-
-[node name="entity21" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 26.2839, 0.0650162, -0.304865)
-
-[node name="Camera Rails" type="Node" parent="Level_Ballpit"]
-
-[node name="CameraRail3" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
-transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 24.6058, 0, 0)
-
-[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail3" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0689383, 0.0250912, 0)
-
-[node name="CameraRail5" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
-transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 25.5218, 0.295852, 0)
-
-[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail5" index="0"]
-transform = Transform3D(0.939692, 0.34202, 0, -0.34202, 0.939692, 0, 0, 0, 1, -0.11072, -0.0896978, 0)
-
-[node name="CameraRail6" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
-transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 26.4922, 0.295852, 0)
-
-[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail6" index="0"]
-transform = Transform3D(0.939692, 0.34202, 0, -0.34202, 0.939692, 0, 0, 0, 1, -0.11072, -0.0896978, 0)
-
-[node name="CameraRail4" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
-transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, 27.4348, 0, 0)
-
-[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail4" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0786457, -0.0286245, 0)
-
 [node name="Level_Corner section" type="Node" parent="."]
 
 [node name="Geometry" type="Node" parent="Level_Corner section"]
@@ -767,7 +448,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6297, 0.0574687, 0.401767)
 [node name="Interactable" type="Node" parent="Level_Corner section"]
 
 [node name="Roomba5" parent="Level_Corner section/Interactable" instance=ExtResource("10_wf0va")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.9085, 0.005, 0.0248843)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.1665, 0.005, 0.0248843)
 
 [node name="End" parent="Level_Corner section/Interactable/Roomba5" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26823, 0.05, -1.86265e-08)
@@ -776,7 +457,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26823, 0.05, -1.86265e-08)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.467377, 0.125807, 0)
 
 [node name="Roomba6" parent="Level_Corner section/Interactable" instance=ExtResource("10_wf0va")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.0966, 0.005, 0.173169)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.3547, 0.005, 0.173169)
 
 [node name="End" parent="Level_Corner section/Interactable/Roomba6" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.280042, 0.05, 0)
@@ -1231,6 +912,356 @@ transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 
 [node name="entity39" parent="Level_Corridors/Interactable" instance=ExtResource("5_631s3")]
 transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 21.6118, 0.0650163, 0.112896)
 
+[node name="Level_Ballpit" type="Node" parent="."]
+
+[node name="Geometry" type="Node" parent="Level_Ballpit"]
+
+[node name="StaticKlemm2x1" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9896, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x2" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.1903, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x3" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.3934, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x6" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.594, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x7" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.7957, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x8" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.9963, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x9" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.1972, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x10" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.3979, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x11" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5984, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x12" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.7991, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x13" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.0014, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x14" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.202, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x15" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.4029, 0.0657745, 0.453293)
+
+[node name="StaticKlemm2x18" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9896, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x19" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.1903, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x20" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.3934, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x21" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.594, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x22" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.7957, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x23" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.9963, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x24" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.1972, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x25" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.3979, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x26" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5984, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x27" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.7991, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x28" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.0014, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x29" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.202, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x30" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.4029, 0.0657745, -0.437495)
+
+[node name="StaticKlemm2x31" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.0904, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x57" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.8904, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x32" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.2911, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x33" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.4942, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x34" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.6949, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x35" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.8965, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x36" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0972, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x37" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.2981, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x38" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.4987, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x39" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.6992, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x40" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.8999, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x41" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.1022, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x42" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.3029, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x43" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.5037, 0.17105, -0.437495)
+
+[node name="StaticKlemm2x44" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.0904, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x58" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.8899, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x45" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.2911, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x46" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.4942, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x47" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.6949, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x48" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.8965, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x49" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.0972, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x50" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.2981, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x51" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.4987, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x52" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.6992, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x53" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.8999, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x54" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.1022, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x55" parent="Level_Ballpit/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.3029, 0.17105, 0.451208)
+
+[node name="StaticKlemm2x4" parent="Level_Ballpit/Geometry" instance=ExtResource("14_748pe")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7934, 0.0617019, 0.300272)
+
+[node name="StaticKlemm2x17" parent="Level_Ballpit/Geometry" instance=ExtResource("14_748pe")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.5956, 0.0617019, -0.29475)
+
+[node name="StaticKlemm2x5" parent="Level_Ballpit/Geometry" instance=ExtResource("14_748pe")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7934, 0.0617019, -0.287454)
+
+[node name="StaticKlemm2x59" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7942, 0.164144, 0.248773)
+
+[node name="StaticKlemm2x60" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7942, 0.164144, -0.240714)
+
+[node name="StaticKlemm2x61" parent="Level_Ballpit/Geometry" instance=ExtResource("7_dx3tg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.7953, 0.26368, 0.00826257)
+
+[node name="StaticKlemm2x62" parent="Level_Ballpit/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7965, 0.366206, 0.00673658)
+
+[node name="StaticKlemm2x64" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.5927, 0.164144, -0.240714)
+
+[node name="StaticKlemm2x16" parent="Level_Ballpit/Geometry" instance=ExtResource("15_a7cv3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.6, 0.0655669, 0.353969)
+
+[node name="StaticKlemm2x56" parent="Level_Ballpit/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5927, 0.264393, -0.0926139)
+
+[node name="StaticKlemm2x63" parent="Level_Ballpit/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5927, 0.356596, 0.014092)
+
+[node name="Interactable" type="Node" parent="Level_Ballpit"]
+
+[node name="Roomba8" parent="Level_Ballpit/Interactable" instance=ExtResource("10_wf0va")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.7976, 0.00500011, 0.0162416)
+
+[node name="End" parent="Level_Ballpit/Interactable/Roomba8" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62146, 0.05, 1.11759e-08)
+
+[node name="Start" parent="Level_Ballpit/Interactable/Roomba8" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242275, 0.05, 3.35276e-08)
+
+[node name="Roombaa" parent="Level_Ballpit/Interactable/Roomba8" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.322488, 0.125807, 5.96046e-08)
+
+[node name="lightweighted_cube33" parent="Level_Ballpit/Interactable" instance=ExtResource("8_pg51q")]
+transform = Transform3D(0.465614, 0, 0.884988, 0, 1, 0, -0.884988, 0, 0.465614, 23.4364, 0.0754924, -0.380573)
+
+[node name="lightweighted_cube34" parent="Level_Ballpit/Interactable" instance=ExtResource("8_pg51q")]
+transform = Transform3D(0.852313, -0.00269854, 0.523026, 0.00163304, 0.999996, 0.00249832, -0.52303, -0.00127525, 0.852313, 23.554, 0.0754925, -0.288401)
+
+[node name="lightweighted_ball2" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5164, 0.13123, -0.157152)
+
+[node name="lightweighted_ball3" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9351, 0.13123, -0.223054)
+
+[node name="lightweighted_ball4" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.805, 0.13123, -0.0392317)
+
+[node name="lightweighted_ball5" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6144, 0.13123, 0.0902682)
+
+[node name="lightweighted_ball6" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4732, 0.13123, 0.264496)
+
+[node name="lightweighted_ball23" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2487, 0.13123, -0.157152)
+
+[node name="lightweighted_ball24" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3468, 0.13123, 0.0902682)
+
+[node name="lightweighted_ball26" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2056, 0.13123, 0.264496)
+
+[node name="lightweighted_ball7" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7215, 0.13123, 0.284006)
+
+[node name="lightweighted_ball8" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9233, 0.13123, 0.194143)
+
+[node name="lightweighted_ball9" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.058, 0.203149, -0.042443)
+
+[node name="lightweighted_ball10" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.263, 0.13123, -0.259007)
+
+[node name="lightweighted_ball11" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.2605, 0.13123, -0.0243405)
+
+[node name="lightweighted_ball12" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.1454, 0.13123, 0.229956)
+
+[node name="lightweighted_ball14" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3458, 0.13123, 0.289219)
+
+[node name="lightweighted_ball15" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5101, 0.13123, -0.202164)
+
+[node name="lightweighted_ball16" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.131, 0.186697, 0.0634867)
+
+[node name="lightweighted_ball17" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.564, 0.13123, 0.276626)
+
+[node name="lightweighted_ball18" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7138, 0.184754, 0.0812069)
+
+[node name="lightweighted_ball19" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7898, 0.13123, -0.16183)
+
+[node name="lightweighted_ball20" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.007, 0.13123, -0.190772)
+
+[node name="lightweighted_ball21" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.8274, 0.13123, 0.278143)
+
+[node name="lightweighted_ball22" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0298, 0.13123, 0.297161)
+
+[node name="lightweighted_ball25" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.9674, 0.13123, 0.0573723)
+
+[node name="lightweighted_ball27" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1985, 0.13123, -0.0591097)
+
+[node name="lightweighted_ball28" parent="Level_Ballpit/Interactable" instance=ExtResource("9_pefam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2243, 0.13123, 0.174379)
+
+[node name="entity19" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 23.988, 0.0650163, -0.249608)
+
+[node name="entity42" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.0902, 0.0650164, -0.296318)
+
+[node name="entity22" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.7595, 0.0650162, -0.298268)
+
+[node name="entity23" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.9169, 0.0650162, 0.330803)
+
+[node name="entity24" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.71, 0.0650162, -0.266753)
+
+[node name="entity25" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.1119, 0.0650162, -0.273945)
+
+[node name="entity26" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.7229, 0.0650162, 0.346072)
+
+[node name="entity20" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 25.0298, 0.0650162, 0.314915)
+
+[node name="entity27" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 24.6786, 0.0650162, -0.278717)
+
+[node name="entity21" parent="Level_Ballpit/Interactable" instance=ExtResource("5_631s3")]
+transform = Transform3D(0.280784, 0, -0.959771, 0, 1, 0, 0.959771, 0, 0.280784, 26.2839, 0.0650162, -0.304865)
+
+[node name="Camera Rails" type="Node" parent="Level_Ballpit"]
+
+[node name="CameraRail3" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 24.6058, 0, 0)
+
+[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0689383, 0.0250912, 0)
+
+[node name="CameraRail5" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 25.5218, 0.295852, 0)
+
+[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail5" index="0"]
+transform = Transform3D(0.939692, 0.34202, 0, -0.34202, 0.939692, 0, 0, 0, 1, -0.11072, -0.0896978, 0)
+
+[node name="CameraRail6" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 26.4922, 0.295852, 0)
+
+[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail6" index="0"]
+transform = Transform3D(0.939692, 0.34202, 0, -0.34202, 0.939692, 0, 0, 0, 1, -0.11072, -0.0896978, 0)
+
+[node name="CameraRail4" parent="Level_Ballpit/Camera Rails" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0, 1, 27.4348, 0, 0)
+
+[node name="CollisionShape3D" parent="Level_Ballpit/Camera Rails/CameraRail4" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0786457, -0.0286245, 0)
+
 [node name="Level_Roomba Hell" type="Node" parent="."]
 
 [node name="Geometry" type="Node" parent="Level_Roomba Hell"]
@@ -1356,6 +1387,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.280042, 0.05, 0)
 
 [node name="Roombaa" parent="Level_Roomba Hell/Interactable/Roomba4" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.238195, 0.125807, 0)
+
+[node name="Node3D" parent="." instance=ExtResource("16_fvw7l")]
+transform = Transform3D(-3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0, 0, 0, 0.7, 38.4449, 0.181049, 0.0546679)
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("11_4a6xw")]
 
@@ -1500,7 +1534,7 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Destination" type="Area3D" parent="UI"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1165, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.3594, 0, 0)
 collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="UI/Destination"]
@@ -1510,14 +1544,14 @@ shape = SubResource("BoxShape3D_bqptu")
 
 [editable path="Camera"]
 [editable path="Level_Intro/Interactable/Roomba15"]
+[editable path="Level_Corner section/Interactable/Roomba5"]
+[editable path="Level_Corner section/Interactable/Roomba6"]
+[editable path="Level_Corridors/Interactable/Roomba7"]
 [editable path="Level_Ballpit/Interactable/Roomba8"]
 [editable path="Level_Ballpit/Camera Rails/CameraRail3"]
 [editable path="Level_Ballpit/Camera Rails/CameraRail5"]
 [editable path="Level_Ballpit/Camera Rails/CameraRail6"]
 [editable path="Level_Ballpit/Camera Rails/CameraRail4"]
-[editable path="Level_Corner section/Interactable/Roomba5"]
-[editable path="Level_Corner section/Interactable/Roomba6"]
-[editable path="Level_Corridors/Interactable/Roomba7"]
 [editable path="Level_Roomba Hell/Interactable/Roomba9"]
 [editable path="Level_Roomba Hell/Interactable/Roomba10"]
 [editable path="Level_Roomba Hell/Interactable/Roomba11"]
