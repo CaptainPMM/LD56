@@ -19,6 +19,7 @@ func _on_entity_activated(_entity):
 		return
 	active_entities.append(_entity)
 	_entity.is_active = true
+	_entity.freeze = false
 	_entity.deactivated.connect(_on_entity_deactivated)
 	current_count += 1
 	print("Score: " + str(current_count))
