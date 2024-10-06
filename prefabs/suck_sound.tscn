@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bafe70tlfovvw"]
+
+[ext_resource type="AudioStream" uid="uid://02vka4s5uxvd" path="res://sounds/sfx/saugen/02-saugen-blop.wav" id="1_un8bc"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_un8bc")
+autoplay = true
