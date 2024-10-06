@@ -50,6 +50,7 @@ func _physics_process(delta):
 	# calculate distance to target
 	var flat_target_position = Vector3(target_position.x, global_transform.origin.y, target_position.z)
 	var direction = flat_target_position - global_transform.origin
+	print("direction: ", direction)
 	var distance = direction.length()
 
 	var attraction_force = Vector3.ZERO
@@ -141,10 +142,11 @@ func calculate_cohesion_force() -> Vector3:
 
 func get_neighbors(radius: float) -> Array:
 	var neighbors = []
-	for e in get_tree().get_nodes_in_group("entity"):
+	for e: entity in get_tree().get_nodes_in_group("entity"):
 		if e != self:
 			if global_transform.origin.distance_to(e.global_transform.origin) < radius:
-				neighbors.append(e)
+				if e.is_active:
+					neighbors.append(e)
 	return neighbors
 
 
