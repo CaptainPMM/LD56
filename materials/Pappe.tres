@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://css67l8kjbb31"]
+
+[ext_resource type="Shader" path="res://shader/papp.gdshader" id="1_xjocc"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_xjocc")
+shader_parameter/input_color1 = Color(0.607829, 0.4671, 0.323979, 1)

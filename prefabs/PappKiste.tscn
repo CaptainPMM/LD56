@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpy7jmwl87q8g"]
+
+[ext_resource type="PackedScene" uid="uid://b0j3m6qglvoy5" path="res://models/Pappkiste.glb" id="1_8r72c"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Pappkiste" parent="." instance=ExtResource("1_8r72c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0691738, 0, -0.0801326)

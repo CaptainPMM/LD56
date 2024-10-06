@@ -50,7 +50,6 @@ func _physics_process(delta):
 	# calculate distance to target
 	var flat_target_position = Vector3(target_position.x, global_transform.origin.y, target_position.z)
 	var direction = flat_target_position - global_transform.origin
-	print("direction: ", direction)
 	var distance = direction.length()
 
 	var attraction_force = Vector3.ZERO
