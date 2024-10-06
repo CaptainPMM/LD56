@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://o3g050uoyevj"]
+[gd_scene load_steps=5 format=3 uid="uid://bwn3ex6yjchm2"]
 
-[ext_resource type="Texture2D" uid="uid://0bhyo2oesxr" path="res://textures/wallpaper.png" id="1_dklsy"]
+[ext_resource type="Texture2D" uid="uid://bbvp3ba7lsqx5" path="res://textures/wallpaper.jpeg" id="1_xgvxx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wvc8l"]
 size = Vector3(50, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rjyp8"]
-albedo_texture = ExtResource("1_dklsy")
-uv1_scale = Vector3(100, 2, 1)
+albedo_texture = ExtResource("1_xgvxx")
+uv1_scale = Vector3(150, 2, 1)
 grow_amount = 11.912
 
 [sub_resource type="BoxMesh" id="BoxMesh_b4w7f"]

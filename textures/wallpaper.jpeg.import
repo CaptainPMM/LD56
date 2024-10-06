@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0bhyo2oesxr"
-path.bptc="res://.godot/imported/wallpaper.png-8aa7e371b2f5d50ba2318432bd06b3d9.bptc.ctex"
+uid="uid://bbvp3ba7lsqx5"
+path.bptc="res://.godot/imported/wallpaper.jpeg-05141aa70654b8749397380f1f956380.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/wallpaper.png"
-dest_files=["res://.godot/imported/wallpaper.png-8aa7e371b2f5d50ba2318432bd06b3d9.bptc.ctex"]
+source_file="res://textures/wallpaper.jpeg"
+dest_files=["res://.godot/imported/wallpaper.jpeg-05141aa70654b8749397380f1f956380.bptc.ctex"]
 
 [params]
 
