@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjac324wjimts"]
+[gd_scene load_steps=10 format=3 uid="uid://ddqu5dae5aok6"]
 
 [ext_resource type="Script" path="res://roomba.gd" id="1_eoxgr"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_ijkqj"]
-top_radius = 0.1
-bottom_radius = 0.1
-height = 0.05
+[ext_resource type="PackedScene" uid="uid://c24sdcu06jxei" path="res://models/Sauger.glb" id="2_nwdhm"]
+[ext_resource type="Shader" path="res://shader/laser_point.gdshader" id="3_hs1a1"]
+[ext_resource type="Texture2D" uid="uid://b81q02ws3ima" path="res://textures/LaserLine.png" id="4_1wjrd"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_y013y"]
 height = 0.1
@@ -16,6 +14,17 @@ radius = 0.11
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bs8d0"]
 radius = 0.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r1liq"]
+render_priority = 0
+shader = ExtResource("3_hs1a1")
+shader_parameter/albedo = Color(1, 1, 1, 0.729412)
+shader_parameter/scale_mod = 1.0
+shader_parameter/cube_half_size = 0.5
+shader_parameter/texture_albedo = ExtResource("4_1wjrd")
+
+[sub_resource type="BoxMesh" id="BoxMesh_wkuwe"]
+material = SubResource("ShaderMaterial_r1liq")
 
 [node name="Roomba" type="Node3D"]
 
@@ -35,15 +44,6 @@ script = ExtResource("1_eoxgr")
 point_a = NodePath("../Start")
 point_b = NodePath("../End")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Roombaa"]
-transform = Transform3D(0.435, 0, 0, 0, 0.435, 0, 0, 0, 0.435, 0.045067, -0.0245383, 0.0290211)
-mesh = SubResource("CylinderMesh_ijkqj")
-skeleton = NodePath("../MeshInstance3D")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Roombaa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0599447, 0)
-mesh = SubResource("CylinderMesh_ijkqj")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Roombaa"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0336028, 0)
 shape = SubResource("CylinderShape3D_y013y")
@@ -59,6 +59,13 @@ shape = SubResource("SphereShape3D_e4k1r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Roombaa/Sucking_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0978018, -0.113979, 0)
 shape = SubResource("SphereShape3D_bs8d0")
+
+[node name="Sauger" parent="Roombaa" instance=ExtResource("2_nwdhm")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.0826861, 0)
+
+[node name="Lasereinheit" type="MeshInstance3D" parent="Roombaa"]
+transform = Transform3D(-0.125, 0, -1.09278e-08, 0, 0.05, 0, 1.09278e-08, 0, -0.125, 0.134627, -0.0721198, 0)
+mesh = SubResource("BoxMesh_wkuwe")
 
 [connection signal="body_entered" from="Roombaa/Kill_area" to="Roombaa" method="_on_kill_area_body_entered"]
 [connection signal="body_entered" from="Roombaa/Sucking_area" to="Roombaa" method="_on_sucking_area_body_entered"]
