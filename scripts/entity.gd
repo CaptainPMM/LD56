@@ -28,7 +28,7 @@ func _init() -> void:
 	
 func _ready():
 	$Area3D.scale = Vector3(cohesion_radius, cohesion_radius, cohesion_radius)
-	freeze = true
+	#freeze = true  #not sure if needed
 	
 
 func _physics_process(delta):
