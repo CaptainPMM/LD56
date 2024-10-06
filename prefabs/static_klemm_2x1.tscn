@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://bx1ibg6a3ldxe"]
+[gd_scene load_steps=6 format=4 uid="uid://bx1ibg6a3ldxe"]
+
+[ext_resource type="Script" path="res://scripts/random_color.gd" id="1_0nh6c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbv22"]
 resource_name = "Klemmbaustein"
@@ -47,6 +49,8 @@ size = Vector3(0.1, 0.1, 0.2)
 transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0, 0.05)
 mesh = SubResource("ArrayMesh_kcttx")
 skeleton = NodePath("")
+script = ExtResource("1_0nh6c")
+possible_colors = PackedColorArray(0.905882, 0.101961, 0.121569, 1, 0, 0.596078, 0.176471, 1, 0, 0.282353, 0.941176, 1, 0.907292, 0.825403, 0, 1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_t84e8")
