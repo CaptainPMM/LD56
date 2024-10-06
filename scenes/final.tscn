@@ -1,9 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=32 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
 [ext_resource type="PackedScene" uid="uid://qa6avp01dssx" path="res://prefabs/camera_rail.tscn" id="3_66in3"]
 [ext_resource type="PackedScene" uid="uid://brlxrla8pe636" path="res://prefabs/tisch.tscn" id="3_tmkrh"]
+[ext_resource type="Texture2D" uid="uid://c40fl3emfgvpg" path="res://models/Moebel_wood_table_001_diff_1k.jpg" id="3_yjvec"]
 [ext_resource type="Script" path="res://scripts/entity_manager.gd" id="4_wtkwh"]
 [ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="5_631s3"]
 [ext_resource type="PackedScene" uid="uid://ban375wxxkrsp" path="res://scenes/Laserpunkt.tscn" id="6_e58cy"]
@@ -28,9 +29,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd5ok"]
 albedo_color = Color(0.49, 0.49, 0.49, 1)
+albedo_texture = ExtResource("3_yjvec")
+uv1_scale = Vector3(500, 500, 500)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hb2fb"]
-size = Vector3(1000, 0.01, 1)
+size = Vector3(1000, 0.25, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
 bg_color = Color(0, 0, 0, 0.27451)
@@ -58,7 +61,7 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -0.545, 0)
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -0.487863, 0)
 mesh = SubResource("PlaneMesh_8htkq")
 surface_material_override/0 = SubResource("StandardMaterial3D_bd5ok")
 
@@ -67,6 +70,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WalkableFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
 shape = SubResource("BoxShape3D_hb2fb")
 
 [node name="tisch" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
