@@ -22,6 +22,9 @@ func _input(_event: InputEvent) -> void:
 
 func startGame() -> void:
 	if !_isGameStarted:
+		# hide mouse cursor
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+		
 		_cam.setXMovSpeed(_initCamSpeed)
 		_cam.setMouseInputs(true)
 		_entity_manager.activate_start_entities()
