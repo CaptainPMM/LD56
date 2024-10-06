@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ddqu5dae5aok6"]
 
-[ext_resource type="Script" path="res://roomba.gd" id="1_eoxgr"]
+[ext_resource type="Script" path="res://scripts/roomba.gd" id="1_eoxgr"]
 [ext_resource type="PackedScene" uid="uid://c24sdcu06jxei" path="res://models/Sauger.glb" id="2_nwdhm"]
 [ext_resource type="Shader" path="res://shader/laser_point.gdshader" id="3_hs1a1"]
 [ext_resource type="Texture2D" uid="uid://b81q02ws3ima" path="res://textures/LaserLine.png" id="4_1wjrd"]
