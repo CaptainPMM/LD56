@@ -50,6 +50,7 @@ stream_5/stream = ExtResource("10_in1oc")
 [node name="entity" type="RigidBody3D" node_paths=PackedStringArray("footsteps", "cheering")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0600161, 0)
 script = ExtResource("1_1biwx")
+min_distance = 0.0
 footsteps = NodePath("Footsteps")
 cheering = NodePath("Cheering")
 
