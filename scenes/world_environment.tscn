@@ -8,6 +8,7 @@ sky_material = SubResource("ProceduralSkyMaterial_wg37i")
 [sub_resource type="Environment" id="Environment_ydo17"]
 background_mode = 2
 sky = SubResource("Sky_t2q4u")
+glow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource("Environment_ydo17")
