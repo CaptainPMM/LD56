@@ -23,6 +23,9 @@ func _on_entity_activated(_entity):
 	_entity.deactivated.connect(_on_entity_deactivated)
 	current_count += 1
 	print("Score: " + str(current_count))
+	for e in active_entities:
+		if randf() < 0.66:
+			e.cheer()
 	
 func _on_entity_deactivated(_entity):
 	active_entities.erase(_entity)

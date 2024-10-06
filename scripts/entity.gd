@@ -16,6 +16,12 @@ class_name entity
 @export var alignment_strength = 1.0       # Strength of the alignment force
 @export var cohesion_strength = 2.0        # Strength of the cohesion force
 
+# sound
+@export var footsteps : AudioStreamPlayer3D
+@export var cheering : AudioStreamPlayer3D
+var audio_timer = 0
+var old_pos : Vector3
+
 signal activated(entity)
 signal deactivated(entity)
 
@@ -29,6 +35,8 @@ func _init() -> void:
 func _ready():
 	$Area3D.scale = Vector3(cohesion_radius, cohesion_radius, cohesion_radius)
 	freeze = true
+	audio_timer = randi_range(0, 30)
+	old_pos = global_position
 	
 
 func _physics_process(delta):
@@ -76,7 +84,18 @@ func _physics_process(delta):
 		#print("Damping Force: ", damping_force)
 		log_timer = 0.0 
 		
+	# Sound
+	var new_pos = global_position
+	if audio_timer > 30:
+		audio_timer = 0
+		if (new_pos - old_pos).length() > 0.00175 and randf() < 0.66:
+			footsteps.play()
+	else:
+		audio_timer += 1
+	old_pos = new_pos
 
+func cheer() -> void:
+	cheering.play()
 
 ##################### FLOCKING HELPER FUNCTIONS ###############################
 

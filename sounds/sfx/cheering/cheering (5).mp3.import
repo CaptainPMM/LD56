@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pise8t0vjvij"
+path="res://.godot/imported/cheering (5).mp3-97edce47383837b18f074042d9a0c210.mp3str"
+
+[deps]
+
+source_file="res://sounds/sfx/cheering/cheering (5).mp3"
+dest_files=["res://.godot/imported/cheering (5).mp3-97edce47383837b18f074042d9a0c210.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
