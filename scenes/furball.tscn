@@ -10,7 +10,7 @@ script = ExtResource("1_un2b0")
 shell_mesh = ExtResource("2_keniw")
 shell_material = ExtResource("2_1dr61")
 shell_scene = ExtResource("2_p0rip")
-shell_count = 32
+shell_count = 8
 density = 40.0
 length = 0.911
 thickness = 4.149
@@ -21,5 +21,3 @@ displacement_strength = 0.2
 
 [node name="Preview" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_keniw")
-
-[node name="Shells" type="Node3D" parent="."]

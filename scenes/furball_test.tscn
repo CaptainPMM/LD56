@@ -53,6 +53,7 @@ script = ExtResource("1_03rga")
 
 [node name="Furball" parent="." instance=ExtResource("1_irrov")]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
+shell_count = 32
 occlusion_attenuation = 2.05
 
 [node name="Sphere_001" type="MeshInstance3D" parent="Furball"]
