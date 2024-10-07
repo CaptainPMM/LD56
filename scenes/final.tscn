@@ -6,15 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://brlxrla8pe636" path="res://prefabs/tisch.tscn" id="3_tmkrh"]
 [ext_resource type="Texture2D" uid="uid://c40fl3emfgvpg" path="res://models/Moebel_wood_table_001_diff_1k.jpg" id="3_yjvec"]
 [ext_resource type="Script" path="res://scripts/entity_manager.gd" id="4_wtkwh"]
-[ext_resource type="PackedScene" uid="uid://dhseym0ohf78o" path="res://prefabs/ordner.tscn" id="5_53nxs"]
+[ext_resource type="PackedScene" path="res://prefabs/ordner.tscn" id="5_53nxs"]
 [ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="5_631s3"]
-[ext_resource type="PackedScene" uid="uid://bqbl17yk58hye" path="res://prefabs/heft.tscn" id="6_3y2pw"]
+[ext_resource type="PackedScene" path="res://prefabs/heft.tscn" id="6_3y2pw"]
 [ext_resource type="PackedScene" uid="uid://ban375wxxkrsp" path="res://scenes/Laserpunkt.tscn" id="6_e58cy"]
 [ext_resource type="PackedScene" uid="uid://bsiqwex3sflv4" path="res://prefabs/static_klemm_2x6.tscn" id="7_dx3tg"]
-[ext_resource type="PackedScene" uid="uid://csgavkkiqws1j" path="res://prefabs/stuhl.tscn" id="7_pv583"]
+[ext_resource type="PackedScene" path="res://prefabs/stuhl.tscn" id="7_pv583"]
 [ext_resource type="PackedScene" uid="uid://bfhn4xbadimpi" path="res://prefabs/static_klemm_2x2.tscn" id="8_gx648"]
 [ext_resource type="PackedScene" uid="uid://cmaeufe2tfm7f" path="res://prefabs/lightweighted_cube.tscn" id="8_pg51q"]
-[ext_resource type="PackedScene" uid="uid://jxed5rgxwdhm" path="res://prefabs/hocker.tscn" id="9_kc4d7"]
+[ext_resource type="PackedScene" path="res://prefabs/hocker.tscn" id="9_kc4d7"]
 [ext_resource type="PackedScene" uid="uid://wc25lmihuyod" path="res://prefabs/lightweighted_ball.tscn" id="9_pefam"]
 [ext_resource type="PackedScene" uid="uid://ddqu5dae5aok6" path="res://prefabs/roomba.tscn" id="10_wf0va"]
 [ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="11_4a6xw"]
@@ -319,7 +319,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.886484, 0.25964, -0.403586)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.410163, 0.361654, -0.403586)
 
 [node name="ordner10" parent="Level_Intro/Geometry" instance=ExtResource("5_53nxs")]
-transform = Transform3D(0.299741, -0.0124633, 0, 0.0124633, 0.299741, 0, 0, 0, 0.3, 1.60397, 0.100477, 0.0132913)
+transform = Transform3D(0.299848, -0.00953313, 0, 0.00953313, 0.299848, 0, 0, 0, 0.3, 1.60397, 0.100477, 0.0132913)
 
 [node name="Interactable" type="Node3D" parent="Level_Intro"]
 
@@ -1030,6 +1030,15 @@ transform = Transform3D(0.972877, 0, 0.231323, 0, 1, 0, -0.231323, 0, 0.972877, 
 
 [node name="entity41" parent="Level_Corridors/Interactable" instance=ExtResource("5_631s3")]
 transform = Transform3D(0.656257, 0, -0.754538, 0, 1, 0, 0.754538, 0, 0.656257, 22.4522, 0.0650161, -0.28884)
+
+[node name="lightweighted_cube" parent="Level_Corridors/Interactable" instance=ExtResource("8_pg51q")]
+transform = Transform3D(0.834675, 0, -0.550743, 0, 1, 0, 0.550743, 0, 0.834675, 18.9168, 0.061943, -0.041422)
+
+[node name="lightweighted_cube2" parent="Level_Corridors/Interactable" instance=ExtResource("8_pg51q")]
+transform = Transform3D(0.834675, 0, -0.550743, 0, 1, 0, 0.550743, 0, 0.834675, 19.0248, 0.061943, 0.0348976)
+
+[node name="lightweighted_cube3" parent="Level_Corridors/Interactable" instance=ExtResource("8_pg51q")]
+transform = Transform3D(0.834675, 0, -0.550743, 0, 1, 0, 0.550743, 0, 0.834675, 18.9751, 0.15912, -0.0057545)
 
 [node name="Level_Ballpit" type="Node3D" parent="."]
 
@@ -1907,7 +1916,7 @@ transform = Transform3D(0.702389, 0, 0.711794, 0, 1, 0, -0.711794, 0, 0.702389, 
 transform = Transform3D(0.702389, 0, 0.711794, 0, 1, 0, -0.711794, 0, 0.702389, 47.1117, 0.0650163, -0.257825)
 
 [node name="entity41" parent="Level_Pachinko/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(-0.595917, 0, 0.803046, 0, 1, 0, -0.803046, 0, -0.595917, 47.2261, 0.0650162, 0.185746)
+transform = Transform3D(-0.595917, 0, 0.803046, 0, 1, 0, -0.803046, 0, -0.595917, 47.1247, 0.0650162, -0.0823678)
 
 [node name="Level_BiggusRampus" type="Node3D" parent="."]
 
@@ -1959,34 +1968,76 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6741, 0.457464, -0.197811)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6741, 0.564102, -0.197811)
 
 [node name="StaticKlemm2x18" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9404, 0.0606597, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9133, 0.0606597, 0.318442)
 
 [node name="StaticKlemm2x19" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9404, 0.159179, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9133, 0.159179, 0.318442)
 
 [node name="StaticKlemm2x30" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2388, 0.159179, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2117, 0.159179, 0.318442)
 
 [node name="StaticKlemm2x20" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9404, 0.257284, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9133, 0.257284, 0.318442)
 
 [node name="StaticKlemm2x21" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9404, 0.354903, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9133, 0.354903, 0.318442)
 
 [node name="StaticKlemm2x22" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9404, 0.457464, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9133, 0.457464, 0.318442)
 
 [node name="StaticKlemm2x26" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2385, 0.0606597, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2114, 0.0606597, 0.318442)
 
 [node name="StaticKlemm2x27" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2385, 0.257284, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2114, 0.257284, 0.318442)
 
 [node name="StaticKlemm2x28" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2385, 0.354903, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2114, 0.354903, 0.318442)
 
 [node name="StaticKlemm2x29" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2385, 0.457464, 0.318442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2114, 0.457464, 0.318442)
+
+[node name="StaticKlemm2x31" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0148, 0.159179, -0.184166)
+
+[node name="StaticKlemm2x32" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.0606596, -0.184166)
+
+[node name="StaticKlemm2x33" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.257284, -0.184166)
+
+[node name="StaticKlemm2x34" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.354903, -0.184166)
+
+[node name="StaticKlemm2x35" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.457464, -0.184166)
+
+[node name="StaticKlemm2x36" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0148, 0.159179, 0.222231)
+
+[node name="StaticKlemm2x37" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.0606596, 0.222231)
+
+[node name="StaticKlemm2x42" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.0606596, 0.421153)
+
+[node name="StaticKlemm2x43" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.0606596, -0.39136)
+
+[node name="StaticKlemm2x44" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.0606596, 0.0175094)
+
+[node name="StaticKlemm2x38" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.257284, 0.222231)
+
+[node name="StaticKlemm2x39" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.354903, 0.222231)
+
+[node name="StaticKlemm2x40" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.657775, 0.0230719)
+
+[node name="StaticKlemm2x41" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0145, 0.457464, 0.222231)
 
 [node name="StaticKlemm2x10" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.7492, 0.0606597, -0.197811)
@@ -2004,28 +2055,28 @@ transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 51.6087, 0.00124174,
 transform = Transform3D(0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 52.4606, 0.00124174, -0.0837506)
 
 [node name="heft" parent="Level_BiggusRampus/Geometry" instance=ExtResource("6_3y2pw")]
-transform = Transform3D(-0.0715074, 0, -0.18678, 0, 0.2, 0, 0.18678, 0, -0.0715074, 51.1996, 0.584002, 0.0190799)
+transform = Transform3D(-0.0893841, 0, -0.233475, 0, 0.25, 0, 0.233475, 0, -0.0893841, 51.1996, 0.584002, 0.0190799)
 
 [node name="heft3" parent="Level_BiggusRampus/Geometry" instance=ExtResource("6_3y2pw")]
-transform = Transform3D(-0.0116139, 0, -0.199662, 0, 0.2, 0, 0.199662, 0, -0.0116139, 52.9354, 0.582247, -0.033806)
+transform = Transform3D(-0.0357566, 0, -0.24743, 0, 0.25, 0, 0.24743, 0, -0.0357566, 52.9161, 0.591139, 0.00831547)
 
 [node name="heft4" parent="Level_BiggusRampus/Geometry" instance=ExtResource("6_3y2pw")]
-transform = Transform3D(-0.0114941, -0.0286536, -0.197603, -0.0016639, 0.197937, -0.0286053, 0.199662, -2.67488e-10, -0.0116139, 53.9922, 0.622847, 0.0320884)
+transform = Transform3D(0.0168693, -0.0355373, -0.246886, -0.00207988, 0.247421, -0.0357565, 0.249422, 0.00446673, 0.0163997, 53.9922, 0.636276, 0.0651656)
 
 [node name="heft2" parent="Level_BiggusRampus/Geometry" instance=ExtResource("6_3y2pw")]
-transform = Transform3D(0.0535923, 0, -0.192686, 0, 0.2, 0, 0.192686, 0, 0.0535923, 52.047, 0.584002, 0.0584773)
+transform = Transform3D(0.0669904, 0, -0.240857, 0, 0.25, 0, 0.240857, 0, 0.0669904, 52.047, 0.584002, 0.0584773)
 
 [node name="ordner" parent="Level_BiggusRampus/Geometry" instance=ExtResource("5_53nxs")]
-transform = Transform3D(0.299715, -0.0130649, 0, 0.0130649, 0.299715, 0, 0, 0, 0.3, 48.4244, 0.100377, 0.0132913)
+transform = Transform3D(0.299897, -0.00786357, 0, 0.00786357, 0.299897, 0, 0, 0, 0.3, 48.4244, 0.100377, 0.0132913)
 
 [node name="ordner5" parent="Level_BiggusRampus/Geometry" instance=ExtResource("5_53nxs")]
 transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 48.9395, 0.101841, 0.259321)
 
 [node name="ordner6" parent="Level_BiggusRampus/Geometry" instance=ExtResource("5_53nxs")]
-transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 49.5311, 0.101841, 0.259321)
+transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 49.524, 0.101841, 0.259321)
 
 [node name="ordner7" parent="Level_BiggusRampus/Geometry" instance=ExtResource("5_53nxs")]
-transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 49.5122, 0.2563, 0.259321)
+transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 49.5051, 0.2563, 0.259321)
 
 [node name="ordner3" parent="Level_BiggusRampus/Geometry" instance=ExtResource("5_53nxs")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 48.9832, 0.257445, 0.203992)
@@ -2065,6 +2116,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6702, -0.00977856, -0.1071
 
 [node name="stuhl3" parent="Level_BiggusRampus/Geometry" instance=ExtResource("7_pv583")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.4557, -0.00977856, 0.0258951)
+
+[node name="StaticKlemm2x23" parent="Level_BiggusRampus/Geometry" instance=ExtResource("7_dx3tg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 56.0157, 0.558324, 0.0233319)
 
 [node name="Camera Rails" type="Node3D" parent="Level_BiggusRampus"]
 
@@ -2288,7 +2342,7 @@ volume_db = -12.0
 autoplay = true
 
 [node name="StaticKlemm2x5" parent="." instance=ExtResource("13_qfc14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0874, 0.554151, 0.317286)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0603, 0.554151, 0.317286)
 
 [connection signal="body_entered" from="Destination" to="GameManager" method="_on_destination_body_entered"]
 

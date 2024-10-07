@@ -18,8 +18,8 @@ radius = 0.1
 
 [node name="lightweighted_ball" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63493, 0.12623, 0.220403)
-mass = 0.1
-gravity_scale = 0.1
+mass = 0.05
+gravity_scale = 0.15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_dajek")

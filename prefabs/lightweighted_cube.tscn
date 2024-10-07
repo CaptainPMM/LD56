@@ -7,8 +7,8 @@ size = Vector3(0.1, 0.1, 0.1)
 
 [node name="lightweighted_cube" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.817466, 0.063115, 0.110202)
-mass = 0.01
-gravity_scale = 0.01
+mass = 0.3
+gravity_scale = 0.1
 
 [node name="Holzwuerfel" parent="." instance=ExtResource("1_eanou")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
