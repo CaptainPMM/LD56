@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="LD56"
+config/name="Roose Dudes"
 run/main_scene="res://scenes/final.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon/icon_1024.png"

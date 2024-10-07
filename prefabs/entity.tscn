@@ -1,14 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://c2jcdvai0x0s6"]
+[gd_scene load_steps=17 format=3 uid="uid://c2jcdvai0x0s6"]
 
 [ext_resource type="Script" path="res://scripts/entity.gd" id="1_1biwx"]
 [ext_resource type="Script" path="res://scripts/entity_visuals.gd" id="2_8vn4d"]
 [ext_resource type="PackedScene" uid="uid://brvfsvdd5nkmm" path="res://scenes/furball.tscn" id="2_44iq6"]
 [ext_resource type="PackedScene" uid="uid://bj2xlqdbn0jtn" path="res://models/Russsmaenchen.glb" id="3_octns"]
-[ext_resource type="AudioStream" uid="uid://yf38m38e05qs" path="res://sounds/sfx/footsteps/footsteps01.wav" id="5_cxgjx"]
-[ext_resource type="AudioStream" uid="uid://dqa2wx5f72mk6" path="res://sounds/sfx/footsteps/footsteps02.wav" id="6_kyr1f"]
-[ext_resource type="AudioStream" uid="uid://b1lin47nfpxm6" path="res://sounds/sfx/footsteps/footsteps03.wav" id="7_8sg45"]
-[ext_resource type="AudioStream" uid="uid://dg7kdv6y5ee26" path="res://sounds/sfx/footsteps/footsteps04.wav" id="8_j6ds4"]
-[ext_resource type="AudioStream" uid="uid://v0881adl6jhf" path="res://sounds/sfx/footsteps/footsteps05.wav" id="9_uwe1d"]
+[ext_resource type="AudioStream" uid="uid://02vka4s5uxvd" path="res://sounds/sfx/saugen/02-saugen-blop.wav" id="5_ky0hk"]
 [ext_resource type="AudioStream" uid="uid://cixss5vvcppnn" path="res://sounds/sfx/cheering/cheering1.wav" id="10_ao1ne"]
 [ext_resource type="AudioStream" uid="uid://bgc0vg6djroxb" path="res://sounds/sfx/cheering/cheering2.wav" id="11_m4588"]
 [ext_resource type="AudioStream" uid="uid://c30agl0iv58f1" path="res://sounds/sfx/cheering/cheering3.wav" id="12_h0n1t"]
@@ -29,12 +25,8 @@ height = 0.5
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mwmvf"]
 random_pitch = 1.2
 random_volume_offset_db = 0.5
-streams_count = 5
-stream_0/stream = ExtResource("5_cxgjx")
-stream_1/stream = ExtResource("6_kyr1f")
-stream_2/stream = ExtResource("7_8sg45")
-stream_3/stream = ExtResource("8_j6ds4")
-stream_4/stream = ExtResource("9_uwe1d")
+streams_count = 1
+stream_0/stream = ExtResource("5_ky0hk")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ke8bd"]
 random_pitch = 1.3
