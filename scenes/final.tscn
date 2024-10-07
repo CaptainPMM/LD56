@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=38 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
@@ -41,6 +41,9 @@ size = Vector3(1000, 1, 1000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hb2fb"]
 size = Vector3(1000, 0.262405, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2xpv"]
+size = Vector3(0.42, 0.1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
 bg_color = Color(0, 0, 0, 0.27451)
@@ -1915,9 +1918,6 @@ transform = Transform3D(0.702389, 0, 0.711794, 0, 1, 0, -0.711794, 0, 0.702389, 
 [node name="entity37" parent="Level_Pachinko/Interactable" instance=ExtResource("5_631s3")]
 transform = Transform3D(0.702389, 0, 0.711794, 0, 1, 0, -0.711794, 0, 0.702389, 47.1117, 0.0650163, -0.257825)
 
-[node name="entity41" parent="Level_Pachinko/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(-0.595917, 0, 0.803046, 0, 1, 0, -0.803046, 0, -0.595917, 47.1247, 0.0650162, -0.0823678)
-
 [node name="Level_BiggusRampus" type="Node3D" parent="."]
 
 [node name="Geometry" type="Node3D" parent="Level_BiggusRampus"]
@@ -2159,16 +2159,17 @@ transform = Transform3D(0.950846, 0.309664, 0, -0.309664, 0.950846, 0, 0, 0, 1, 
 transform = Transform3D(0.952508, -0.304515, 0, 0.304515, 0.952508, 0, 0, 0, 1, -0.161346, -0.0525417, 0.445808)
 
 [node name="CameraRail8" parent="Level_BiggusRampus/Camera Rails" instance=ExtResource("3_66in3")]
-transform = Transform3D(0.950846, 0.309664, 0, -0.309664, 0.950846, 0, 0, 0, 1, 54.2059, 0.60411, -0.232435)
+transform = Transform3D(0.950846, 0.309664, 0, -0.309664, 0.950846, 0, 0, 0, 1, 53.9273, 0.60411, -0.232435)
 
 [node name="CollisionShape3D" parent="Level_BiggusRampus/Camera Rails/CameraRail8" index="0"]
 transform = Transform3D(0.952508, -0.304515, 0, 0.304515, 0.952508, 0, 0, 0, 1, -0.161346, -0.0525417, 0.445808)
+shape = SubResource("BoxShape3D_q2xpv")
 
 [node name="CameraRail9" parent="Level_BiggusRampus/Camera Rails" instance=ExtResource("3_66in3")]
-transform = Transform3D(0.950846, 0.309664, 0, -0.309664, 0.950846, 0, 0, 0, 1, 55.1326, 0.334079, -0.232435)
+transform = Transform3D(0.991246, 0.132031, 0, -0.132031, 0.991246, 0, 0, 0, 1, 54.5557, 0.367164, -0.232435)
 
 [node name="CollisionShape3D" parent="Level_BiggusRampus/Camera Rails/CameraRail9" index="0"]
-transform = Transform3D(0.994197, 0.107583, 0, -0.107583, 0.994197, 0, 0, 0, 1, -0.191914, 0.00315285, 0.445808)
+transform = Transform3D(0.958563, 0.284886, 0, -0.284886, 0.958563, 0, 0, 0, 1, -0.191914, 0.00315285, 0.445808)
 
 [node name="Node3D" parent="." instance=ExtResource("16_fvw7l")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 55.3161, 0.135959, 0.0546679)
