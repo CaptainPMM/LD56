@@ -52,10 +52,10 @@ func _ready() -> void:
 		update_properties_material(mat_duplicate, i)
 		shells.mesh_instance.set_surface_override_material(i, mat_duplicate)
 
-func _process(_delta: float) -> void:
-	# update all shader globals every frame in editor or debug build, but not in release build
-	if OS.has_feature("debug"):
-		update_properties_all_materials()
+#func _process(_delta: float) -> void:
+	## update all shader globals every frame in editor or debug build, but not in release build
+	#if OS.has_feature("debug"):
+		#update_properties_all_materials()
 
 @onready var old_pos: Vector3 = self.global_position
 
