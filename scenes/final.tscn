@@ -19,10 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://ddkxixjd7te70" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
 [ext_resource type="PackedScene" uid="uid://bx1ibg6a3ldxe" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
 [ext_resource type="PackedScene" uid="uid://dpy7jmwl87q8g" path="res://prefabs/PappKiste.tscn" id="16_fvw7l"]
-[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="17_jjpoh"]
 [ext_resource type="Script" path="res://scenes/fadeOut.gd" id="18_scyaq"]
 [ext_resource type="Script" path="res://scenes/animation_component.gd" id="19_tvvcx"]
 [ext_resource type="PackedScene" uid="uid://bwn3ex6yjchm2" path="res://prefabs/wall.tscn" id="21_nnyvy"]
+[ext_resource type="Texture2D" uid="uid://diqymvc5piwl8" path="res://textures/icon/icon_128.png" id="22_87rav"]
 [ext_resource type="AudioStream" uid="uid://b0v7oah742o2u" path="res://sounds/music/RussDudes.mp3" id="23_0y0iq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]
@@ -1533,12 +1533,15 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -40.0
+offset_left = -38.0
 offset_top = -20.5
+offset_right = 2.0
 offset_bottom = 21.5
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 30
 text = "0"
 
@@ -1547,11 +1550,12 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -23.5
-offset_right = 52.0
-offset_bottom = 23.5
+offset_left = -3.0
+offset_top = -27.5
+offset_right = 53.0
+offset_bottom = 28.5
 grow_vertical = 2
-texture = ExtResource("17_jjpoh")
+texture = ExtResource("22_87rav")
 expand_mode = 1
 
 [node name="Destination" type="Area3D" parent="."]
