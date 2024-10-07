@@ -13,9 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://ddqu5dae5aok6" path="res://prefabs/roomba.tscn" id="10_r4htx"]
 [ext_resource type="PackedScene" uid="uid://dndw8hwyc8ow8" path="res://scenes/world_environment.tscn" id="11_4sw0n"]
 [ext_resource type="PackedScene" uid="uid://c24sdcu06jxei" path="res://models/Sauger.glb" id="11_coa60"]
-[ext_resource type="PackedScene" path="res://prefabs/suck_sound.tscn" id="11_dmdro"]
+[ext_resource type="PackedScene" uid="uid://bafe70tlfovvw" path="res://prefabs/suck_sound.tscn" id="11_dmdro"]
 [ext_resource type="Shader" path="res://shader/laser_point.gdshader" id="12_1cipm"]
-[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="12_fw5fn"]
+[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://icon/icon_1024.png" id="12_fw5fn"]
 [ext_resource type="Texture2D" uid="uid://b81q02ws3ima" path="res://textures/LaserLine.png" id="13_oe4sm"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e0gt5f3wdctl"
-path.s3tc="res://.godot/imported/Moebel_wood_table_001_diff_1k.jpg-8e691e79771032036d9ebed935c54d6b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Moebel_wood_table_001_diff_1k.jpg-f02d15362d03b35dadce4cd7d1ff1037.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Moebel_wood_table_001_diff_1k.jpg"
-dest_files=["res://.godot/imported/Moebel_wood_table_001_diff_1k.jpg-8e691e79771032036d9ebed935c54d6b.s3tc.ctex"]
+source_file="res://textures/Moebel_wood_table_001_diff_1k.jpg"
+dest_files=["res://.godot/imported/Moebel_wood_table_001_diff_1k.jpg-f02d15362d03b35dadce4cd7d1ff1037.s3tc.ctex"]
 
 [params]
 

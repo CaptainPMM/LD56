@@ -22,7 +22,7 @@
 [ext_resource type="Script" path="res://scenes/fadeOut.gd" id="18_scyaq"]
 [ext_resource type="Script" path="res://scenes/animation_component.gd" id="19_tvvcx"]
 [ext_resource type="PackedScene" uid="uid://bwn3ex6yjchm2" path="res://prefabs/wall.tscn" id="21_nnyvy"]
-[ext_resource type="Texture2D" uid="uid://diqymvc5piwl8" path="res://textures/icon/icon_128.png" id="22_87rav"]
+[ext_resource type="Texture2D" uid="uid://diqymvc5piwl8" path="res://icon/icon_128.png" id="22_87rav"]
 [ext_resource type="AudioStream" uid="uid://b0v7oah742o2u" path="res://sounds/music/RussDudes.mp3" id="23_0y0iq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8htkq"]

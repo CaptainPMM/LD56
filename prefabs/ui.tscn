@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/fadeOut.gd" id="1_203kl"]
 [ext_resource type="Script" path="res://scenes/animation_component.gd" id="2_0yuxp"]
-[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://textures/russdude-transparent.png" id="3_nu11d"]
+[ext_resource type="Texture2D" uid="uid://cku5fml8yhl6k" path="res://icon/icon_1024.png" id="3_nu11d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg1a2"]
 bg_color = Color(0, 0, 0, 0.27451)

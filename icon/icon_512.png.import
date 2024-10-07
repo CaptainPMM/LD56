@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cku5fml8yhl6k"
-path="res://.godot/imported/russdude-transparent.png-1eb476b3857d5c5a351f5329796fa78e.ctex"
+uid="uid://dfqqtlqwitqbf"
+path="res://.godot/imported/icon_512.png-a2311e5fab2f8b2e669eac1f7666f41c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/russdude-transparent.png"
-dest_files=["res://.godot/imported/russdude-transparent.png-1eb476b3857d5c5a351f5329796fa78e.ctex"]
+source_file="res://icon/icon_512.png"
+dest_files=["res://.godot/imported/icon_512.png-a2311e5fab2f8b2e669eac1f7666f41c.ctex"]
 
 [params]
 
