@@ -60,6 +60,9 @@ func _ready() -> void:
 @onready var old_pos: Vector3 = self.global_position
 
 func _physics_process(delta: float) -> void:
+	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
+		return
+	
 	var pos_change = self.global_position - old_pos
 	old_pos = self.global_position
 	
