@@ -8,6 +8,7 @@ class_name Camera
 @export_flags_3d_physics var _collisionMask : int
 
 @onready var _cam : Camera3D = $Camera3D
+@onready var _pointer_line : Node3D = $PointerLine
 
 var _mouseInputs : bool = true
 
@@ -45,7 +46,12 @@ func _handleLaser() -> void:
 		
 		if rayResult:
 			_laserPoint.position = rayResult.position;
-	
+		
+		# visualization with line
+		_pointer_line.global_position = rayResult.position
+		var direction = (from - to).normalized()
+		direction.y -= 0.1
+		_pointer_line.global_transform.basis = Basis.looking_at(direction)
 
 func getXMovSpeed() -> float:
 	return _xMovSpeed

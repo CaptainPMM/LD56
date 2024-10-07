@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bolfnpqucy2q4"]
+[gd_scene load_steps=7 format=3 uid="uid://bolfnpqucy2q4"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_mldnq"]
+[ext_resource type="PackedScene" uid="uid://biiv7fi7uet6r" path="res://prefabs/pointer_line.tscn" id="2_c4yqr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o3mev"]
 
@@ -30,6 +31,8 @@ collision_layer = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0357123, -0.216199)
 shape = SubResource("BoxShape3D_umasd")
+
+[node name="PointerLine" parent="." instance=ExtResource("2_c4yqr")]
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
