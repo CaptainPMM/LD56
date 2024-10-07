@@ -44,14 +44,17 @@ func _handleLaser() -> void:
 		rayQuery.collide_with_areas = true;
 		var rayResult = castSpace.intersect_ray(rayQuery);
 		
+		var direction = (from - to).normalized()
+		direction.y -= 0.1
+		var la_basis = Basis.looking_at(direction)
+		# visualization dot on surface
 		if rayResult:
 			_laserPoint.position = rayResult.position;
+			_laserPoint.global_transform.basis = la_basis
 		
 		# visualization with line
 		_pointer_line.global_position = rayResult.position
-		var direction = (from - to).normalized()
-		direction.y -= 0.1
-		_pointer_line.global_transform.basis = Basis.looking_at(direction)
+		_pointer_line.global_transform.basis = la_basis
 
 func getXMovSpeed() -> float:
 	return _xMovSpeed
