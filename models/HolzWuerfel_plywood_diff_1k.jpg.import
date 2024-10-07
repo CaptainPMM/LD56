@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bl7tsabanmm7o"
-path.s3tc="res://.godot/imported/HolzWuerfel_plywood_diff_1k.jpg-5410a1df13f14d34bc2d633552a393ee.s3tc.ctex"
+path="res://.godot/imported/HolzWuerfel_plywood_diff_1k.jpg-5410a1df13f14d34bc2d633552a393ee.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "7c4d9f5863c9234deb78acae9624bc51"
@@ -15,11 +14,11 @@ generator_parameters={
 [deps]
 
 source_file="res://models/HolzWuerfel_plywood_diff_1k.jpg"
-dest_files=["res://.godot/imported/HolzWuerfel_plywood_diff_1k.jpg-5410a1df13f14d34bc2d633552a393ee.s3tc.ctex"]
+dest_files=["res://.godot/imported/HolzWuerfel_plywood_diff_1k.jpg-5410a1df13f14d34bc2d633552a393ee.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
