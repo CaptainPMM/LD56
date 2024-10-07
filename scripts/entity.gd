@@ -26,7 +26,7 @@ signal activated(entity)
 signal deactivated(entity)
 
 var is_active: bool # activated by entity_manager
-var target_position = Vector3()
+@onready var target_position = self.global_position
 var log_timer = 0.0
 
 func _init() -> void:
