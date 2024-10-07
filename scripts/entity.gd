@@ -35,7 +35,7 @@ func _init() -> void:
 func _ready():
 	$Area3D.scale = Vector3(cohesion_radius, cohesion_radius, cohesion_radius)
 	# freeze = true  # not sure if needed
-	audio_timer = randi_range(0, 30)
+	audio_timer = randi_range(0, 10)
 	old_pos = global_position
 
 func _physics_process(delta):
@@ -85,17 +85,17 @@ func _physics_process(delta):
 		
 	# Sound
 	var new_pos = global_position
-	if audio_timer > 30:
+	if audio_timer > 10:
 		audio_timer = 0
-		if (new_pos - old_pos).length() > 0.00175 and randf() < 0.66:
-			if not OS.has_feature("web_android") and not OS.has_feature("web_ios"):
+		if (new_pos - old_pos).length() > 0.00175 and randf() < 0.75:
+			if !footsteps.playing:
 				footsteps.play()
 	else:
 		audio_timer += 1
 	old_pos = new_pos
 
 func cheer() -> void:
-	if not OS.has_feature("web_android") and not OS.has_feature("web_ios"):
+	if !cheering.playing:
 		cheering.play()
 
 ##################### FLOCKING HELPER FUNCTIONS ###############################
