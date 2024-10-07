@@ -1,8 +1,8 @@
-# LD56 Game Jam: {Name Pending...}
+# LD56 Game Jam: Roose Dudes
 
 This game project was developed for the Ludum Dare 56 Game Jam in 72 hours.
 
-{Link pending...}
+https://ldjam.com/events/ludum-dare/56/$400792
 
 # Contributors
 [Fynn](https://github.com/FynnRieger)  
