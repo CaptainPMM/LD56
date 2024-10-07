@@ -84,16 +84,16 @@ func _physics_process(delta):
 		log_timer = 0.0 
 		
 	# Sound
-	#if not OS.has_feature("web_android") and not OS.has_feature("web_ios"):
-	var new_pos = global_position
-	if audio_timer > 10:
-		audio_timer = 0
-		if (new_pos - old_pos).length() > 0.00175 and randf() < 0.75:
-			if !footsteps.playing:
-				footsteps.play()
-	else:
-		audio_timer += 1
-	old_pos = new_pos
+	if not OS.has_feature("web_android") and not OS.has_feature("web_ios"):
+		var new_pos = global_position
+		if audio_timer > 10:
+			audio_timer = 0
+			if (new_pos - old_pos).length() > 0.00175 and randf() < 0.75:
+				if !footsteps.playing:
+					footsteps.play()
+		else:
+			audio_timer += 1
+		old_pos = new_pos
 
 func cheer() -> void:
 	#if not OS.has_feature("web_android") and not OS.has_feature("web_ios"):
