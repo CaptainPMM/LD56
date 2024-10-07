@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://wi4361uno5um" path="res://prefabs/static_klemm_2x4.tscn" id="14_748pe"]
 [ext_resource type="PackedScene" uid="uid://ddkxixjd7te70" path="res://prefabs/static_klemm_2x3.tscn" id="15_a7cv3"]
 [ext_resource type="PackedScene" uid="uid://bx1ibg6a3ldxe" path="res://prefabs/static_klemm_2x1.tscn" id="16_0rp6p"]
-[ext_resource type="PackedScene" path="res://prefabs/PappKiste.tscn" id="16_fvw7l"]
+[ext_resource type="PackedScene" uid="uid://dpy7jmwl87q8g" path="res://prefabs/PappKiste.tscn" id="16_fvw7l"]
 [ext_resource type="Script" path="res://scenes/fadeOut.gd" id="18_scyaq"]
 [ext_resource type="Script" path="res://scenes/animation_component.gd" id="19_tvvcx"]
 [ext_resource type="PackedScene" uid="uid://bwn3ex6yjchm2" path="res://prefabs/wall.tscn" id="21_nnyvy"]
@@ -2099,7 +2099,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8882, 0, -1.282)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_0y0iq")
-volume_db = -15.0
+volume_db = -12.0
 autoplay = true
 
 [node name="Level_BiggusRampus" type="Node" parent="."]

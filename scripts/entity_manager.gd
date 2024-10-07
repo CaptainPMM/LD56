@@ -17,8 +17,9 @@ signal game_over
 
 func _process(_delta: float) -> void:
 	# all entities will follow the laser
-	for _entity in active_entities:
-		if _entity: # this should never happen, but unfortunately it does sometimes
+	for _entity: entity in active_entities:
+		# this should always be true, but unfortunately it is not sometimes
+		if _entity && is_instance_valid(_entity):
 			_entity.target_position = laser_point.global_position
 
 func _on_entity_activated(_entity):

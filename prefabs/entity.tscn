@@ -80,15 +80,12 @@ mesh = SubResource("SphereMesh_7ds2b")
 
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamRandomizer_mwmvf")
-volume_db = -15.0
-max_db = 0.0
-max_distance = 3.0
+max_db = 1.0
 
 [node name="Cheering" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamRandomizer_ke8bd")
 volume_db = -35.0
-max_db = 0.0
-max_distance = 5.0
+max_db = 1.0
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 
