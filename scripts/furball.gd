@@ -30,6 +30,9 @@ var shells: Shell
 func _ready() -> void:
 	$Preview.visible = false
 	
+	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
+		shell_count = 4
+	
 	# generate mesh that has one surface for every shell
 	var mdt: MeshDataTool = MeshDataTool.new()
 	mdt.create_from_surface(shell_mesh, 0)

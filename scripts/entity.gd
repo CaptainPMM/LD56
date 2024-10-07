@@ -88,13 +88,15 @@ func _physics_process(delta):
 	if audio_timer > 30:
 		audio_timer = 0
 		if (new_pos - old_pos).length() > 0.00175 and randf() < 0.66:
-			footsteps.play()
+			if not OS.has_feature("web_android") and not OS.has_feature("web_ios"):
+				footsteps.play()
 	else:
 		audio_timer += 1
 	old_pos = new_pos
 
 func cheer() -> void:
-	cheering.play()
+	if not OS.has_feature("web_android") and not OS.has_feature("web_ios"):
+		cheering.play()
 
 ##################### FLOCKING HELPER FUNCTIONS ###############################
 
