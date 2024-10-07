@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d2ktkfoynnd5h"]
+[gd_scene load_steps=35 format=3 uid="uid://d2ktkfoynnd5h"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gbpa2"]
 [ext_resource type="PackedScene" uid="uid://bolfnpqucy2q4" path="res://prefabs/camera.tscn" id="2_lywe7"]
@@ -6,9 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://brlxrla8pe636" path="res://prefabs/tisch.tscn" id="3_tmkrh"]
 [ext_resource type="Texture2D" uid="uid://c40fl3emfgvpg" path="res://models/Moebel_wood_table_001_diff_1k.jpg" id="3_yjvec"]
 [ext_resource type="Script" path="res://scripts/entity_manager.gd" id="4_wtkwh"]
+[ext_resource type="PackedScene" path="res://prefabs/ordner.tscn" id="5_53nxs"]
 [ext_resource type="PackedScene" uid="uid://c2jcdvai0x0s6" path="res://prefabs/entity.tscn" id="5_631s3"]
+[ext_resource type="PackedScene" path="res://prefabs/heft.tscn" id="6_3y2pw"]
 [ext_resource type="PackedScene" uid="uid://ban375wxxkrsp" path="res://scenes/Laserpunkt.tscn" id="6_e58cy"]
 [ext_resource type="PackedScene" uid="uid://bsiqwex3sflv4" path="res://prefabs/static_klemm_2x6.tscn" id="7_dx3tg"]
+[ext_resource type="PackedScene" path="res://prefabs/stuhl.tscn" id="7_pv583"]
 [ext_resource type="PackedScene" uid="uid://bfhn4xbadimpi" path="res://prefabs/static_klemm_2x2.tscn" id="8_gx648"]
 [ext_resource type="PackedScene" uid="uid://cmaeufe2tfm7f" path="res://prefabs/lightweighted_cube.tscn" id="8_pg51q"]
 [ext_resource type="PackedScene" uid="uid://wc25lmihuyod" path="res://prefabs/lightweighted_ball.tscn" id="9_pefam"]
@@ -54,7 +57,11 @@ _cam = NodePath("../Camera")
 _entity_manager = NodePath("../EntityManager")
 
 [node name="Camera" parent="." node_paths=PackedStringArray("_laserPoint") instance=ExtResource("2_lywe7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3619, 0, 0)
 _laserPoint = NodePath("../LaserPoint")
+
+[node name="CollisionShape3D" parent="Camera/Area3D" index="0"]
+transform = Transform3D(0.993529, 0, 0, 0, 0.993529, 0, 0, 0, 0.993529, 0, 0.0357123, -0.216199)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
@@ -96,6 +103,87 @@ transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 36.1598, -1.307, -0.000
 
 [node name="tisch8" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
 transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 41.7703, -1.307, -0.000242949)
+
+[node name="tisch9" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 47.376, -1.307, -0.000242949)
+
+[node name="tisch10" parent="WalkableFloor" instance=ExtResource("3_tmkrh")]
+transform = Transform3D(1.08, 0, 0, 0, 1, 0, 0, 0, 0.51, 52.9847, -1.307, -0.000242949)
+
+[node name="ordner" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(0.299715, -0.0130649, 0, 0.0130649, 0.299715, 0, 0, 0, 0.3, 48.4086, 0.100377, 0.0132913)
+
+[node name="ordner5" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 48.9395, 0.101841, 0.259321)
+
+[node name="ordner6" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 49.5311, 0.101841, 0.259321)
+
+[node name="ordner7" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 49.5122, 0.2563, 0.259321)
+
+[node name="ordner3" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 48.9777, 0.257445, 0.203992)
+
+[node name="CameraRail5" parent="WalkableFloor" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.922376, -0.386292, 0, 0.386292, 0.922376, 0, 0, 0, 1, 2.07466, 0.176037, 0.268308)
+
+[node name="CameraRail6" parent="WalkableFloor" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.999235, -0.0391029, 0, 0.0391029, 0.999235, 0, 0, 0, 1, 2.94614, 0.458666, 0.268308)
+
+[node name="CollisionShape3D" parent="WalkableFloor/CameraRail6" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00421596, -0.107731, 0)
+
+[node name="ordner8" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(0.299715, -0.0130649, 0, 0.0130649, 0.299715, 0, 0, 0, 0.3, 2.50391, 0.100377, 0.0132913)
+
+[node name="ordner9" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(-1.31009e-08, 5.71999e-10, -0.3, -0.0111605, 0.299792, 1.05898e-09, 0.299792, 0.0111605, -1.30706e-08, 3.03479, 0.101841, 0.259321)
+
+[node name="ordner11" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3.07307, 0.257445, 0.203992)
+
+[node name="ordner10" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(0.299741, -0.0124633, 0, 0.0124633, 0.299741, 0, 0, 0, 0.3, 1.60397, 0.100477, 0.0132913)
+
+[node name="ordner4" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 49.5516, 0.406556, 0.203992)
+
+[node name="ordner2" parent="WalkableFloor" instance=ExtResource("5_53nxs")]
+transform = Transform3D(-0.289853, -0.0773624, 3.38162e-09, 1.01229e-15, -1.31134e-08, -0.3, 0.0773624, -0.289853, 1.26699e-08, 52.5508, 0.300503, -0.125583)
+
+[node name="heft" parent="WalkableFloor" instance=ExtResource("6_3y2pw")]
+transform = Transform3D(0.19403, 0.0464608, 0.0139257, 0, 0.057422, -0.19158, -0.0485029, 0.18586, 0.0557078, 52.5914, 0.319521, 0.0631268)
+
+[node name="stuhl" parent="WalkableFloor" instance=ExtResource("7_pv583")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0725, -0.132466, 0.162217)
+
+[node name="stuhl3" parent="WalkableFloor" instance=ExtResource("7_pv583")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58079, -0.259785, 0.162217)
+
+[node name="stuhl2" parent="WalkableFloor" instance=ExtResource("7_pv583")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6866, -0.147555, 0.162217)
+
+[node name="CameraRail2" parent="WalkableFloor" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.932008, -0.362438, 0, 0.362438, 0.932008, 0, 0, 0, 1, 48.0197, 0.232786, 0.23357)
+
+[node name="CollisionShape3D" parent="WalkableFloor/CameraRail2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364719, -0.2377, 0)
+
+[node name="CameraRail7" parent="WalkableFloor" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.932008, -0.362438, 0, 0.362438, 0.932008, 0, 0, 0, 1, 48.6893, 0.489312, 0.23357)
+
+[node name="CollisionShape3D" parent="WalkableFloor/CameraRail7" index="0"]
+transform = Transform3D(0.99942, 0.0340622, 0, -0.0340622, 0.99942, 0, 0, 0, 1, 0.534405, -0.246052, 0)
+
+[node name="CameraRail3" parent="WalkableFloor" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.999982, 0.00600386, 0, -0.00600386, 0.999982, 0, 0, 0, 1, 50.1997, 0.605035, 0.23357)
+
+[node name="CameraRail4" parent="WalkableFloor" instance=ExtResource("3_66in3")]
+transform = Transform3D(0.950846, 0.309664, 0, -0.309664, 0.950846, 0, 0, 0, 1, 50.9782, 0.60411, 0.23357)
+
+[node name="CollisionShape3D" parent="WalkableFloor/CameraRail4" index="0"]
+transform = Transform3D(0.952507, -0.304515, 0, 0.304515, 0.952507, 0, 0, 0, 1, 0.143921, 0.0468731, 0)
 
 [node name="EntityManager" type="Node3D" parent="." node_paths=PackedStringArray("laser_point", "start_entities")]
 script = ExtResource("4_wtkwh")
@@ -362,13 +450,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16517, 0.05, 7.82311e-08)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.700535, 0.125807, -1.11759e-08)
 
 [node name="entity" parent="Level_Intro/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413198, 0.065, 0.212286)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3104, 0.065, 0.212286)
 
 [node name="entity2" parent="Level_Intro/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.598845, 0.065, 0.21474)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.496, 0.065, 0.21474)
 
 [node name="entity3" parent="Level_Intro/Interactable" instance=ExtResource("5_631s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.505683, 0.065, 0.290582)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4029, 0.065, 0.290582)
 
 [node name="entity40" parent="Level_Intro/Interactable" instance=ExtResource("5_631s3")]
 transform = Transform3D(-0.595917, 0, 0.803046, 0, 1, 0, -0.803046, 0, -0.595917, 0.275366, 0.0650162, 0.447798)
@@ -1388,13 +1476,19 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36.228
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.1491, 0.0613896, 0.0603351)
 
 [node name="StaticKlemm2x21" parent="Level_Roomba Hell/Geometry" instance=ExtResource("15_a7cv3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 38.0099, 0.0613896, -0.0329559)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 38.0099, 0.0613896, -0.0402047)
 
 [node name="StaticKlemm2x20" parent="Level_Roomba Hell/Geometry" instance=ExtResource("15_a7cv3")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.1491, 0.0613896, 0.358028)
 
 [node name="StaticKlemm2x9" parent="Level_Roomba Hell/Geometry" instance=ExtResource("15_a7cv3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 38.0121, 0.0613895, -0.33522)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 38.0121, 0.0613895, -0.342469)
+
+[node name="StaticKlemm2x72" parent="Level_Roomba Hell/Geometry" instance=ExtResource("15_a7cv3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 38.5046, 0.0613896, 0.358254)
+
+[node name="StaticKlemm2x73" parent="Level_Roomba Hell/Geometry" instance=ExtResource("15_a7cv3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 38.5068, 0.0613895, 0.0583873)
 
 [node name="StaticKlemm2x1" parent="Level_Roomba Hell/Geometry" instance=ExtResource("16_0rp6p")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.2266, 0.0580942, 0.441322)
@@ -1543,12 +1637,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9544, 0.0590446, 0.302079)
 [node name="StaticKlemm2x65" parent="Level_Roomba Hell/Geometry" instance=ExtResource("8_gx648")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9544, 0.157719, 0.302079)
 
-[node name="StaticKlemm2x66" parent="Level_Roomba Hell/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9544, 0.257491, 0.302079)
-
-[node name="StaticKlemm2x67" parent="Level_Roomba Hell/Geometry" instance=ExtResource("8_gx648")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9544, 0.356097, 0.205549)
-
 [node name="StaticKlemm2x69" parent="Level_Roomba Hell/Geometry" instance=ExtResource("14_748pe")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.9539, 0.456319, 0.0043485)
 
@@ -1557,6 +1645,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.953
 
 [node name="StaticKlemm2x71" parent="Level_Roomba Hell/Geometry" instance=ExtResource("16_0rp6p")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.9531, 0.0622638, -0.442377)
+
+[node name="StaticKlemm2x74" parent="Level_Roomba Hell/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0103, 0.159741, 0.00934905)
+
+[node name="StaticKlemm2x76" parent="Level_Roomba Hell/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.1243, 0.258349, 0.0118961)
+
+[node name="StaticKlemm2x75" parent="Level_Roomba Hell/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5062, 0.160873, 0.0076884)
 
 [node name="Interactable" type="Node" parent="Level_Roomba Hell"]
 
@@ -1629,8 +1726,213 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.280042, 0.05, 0)
 [node name="Roombaa" parent="Level_Roomba Hell/Interactable/Roomba3" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13091, 0.125807, 0)
 
+[node name="Level_Pachinko" type="Node" parent="."]
+
+[node name="Geometry" type="Node" parent="Level_Pachinko"]
+
+[node name="StaticKlemm2x1" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 39.1823, 0.0607005, 0.40855)
+
+[node name="StaticKlemm2x2" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 39.3223, 0.0607005, 0.266208)
+
+[node name="StaticKlemm2x9" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 40.4572, 0.0607005, 0.400758)
+
+[node name="StaticKlemm2x10" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 40.5972, 0.0607005, 0.258416)
+
+[node name="StaticKlemm2x11" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 40.7362, 0.0607005, 0.120536)
+
+[node name="StaticKlemm2x12" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 40.8763, 0.0607005, -0.0218065)
+
+[node name="StaticKlemm2x41" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 41.2762, 0.0607005, 0.404276)
+
+[node name="StaticKlemm2x19" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 42.4611, 0.0607005, -0.16428)
+
+[node name="StaticKlemm2x25" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 43.9512, 0.0607005, -0.189971)
+
+[node name="StaticKlemm2x33" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 43.2548, 0.0607005, 0.401666)
+
+[node name="StaticKlemm2x35" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 42.965, 0.0607005, -0.128249)
+
+[node name="StaticKlemm2x27" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 44.6098, 0.0607005, 0.401936)
+
+[node name="StaticKlemm2x38" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 44.7492, 0.0607005, 0.263129)
+
+[node name="StaticKlemm2x45" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.0010297, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.0010297, 45.3718, 0.0607005, -0.444387)
+
+[node name="StaticKlemm2x46" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.0010297, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.0010297, 45.5686, 0.0607005, -0.443757)
+
+[node name="StaticKlemm2x69" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.0010297, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.0010297, 45.5667, 0.0607005, 0.0564983)
+
+[node name="StaticKlemm2x47" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.0010297, 0, 0.999999, 0, 1, 0, -0.999999, 0, 0.0010297, 45.768, 0.0607005, -0.444429)
+
+[node name="StaticKlemm2x37" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 44.4511, 0.0607005, 0.0702412)
+
+[node name="StaticKlemm2x39" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 44.1642, 0.0607005, 0.39693)
+
+[node name="StaticKlemm2x3" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 39.1806, 0.0607005, -0.389121)
+
+[node name="StaticKlemm2x4" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 39.3225, 0.0607005, -0.24839)
+
+[node name="StaticKlemm2x5" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 39.944, 0.0607005, -0.399149)
+
+[node name="StaticKlemm2x6" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 40.0859, 0.0607005, -0.258418)
+
+[node name="StaticKlemm2x7" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 40.2257, 0.0607005, -0.121398)
+
+[node name="StaticKlemm2x8" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 40.3676, 0.0607005, 0.0193326)
+
+[node name="StaticKlemm2x13" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 40.9477, 0.0607005, -0.388396)
+
+[node name="StaticKlemm2x14" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 41.0896, 0.0607005, -0.247665)
+
+[node name="StaticKlemm2x15" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 41.2294, 0.0607005, -0.110645)
+
+[node name="StaticKlemm2x16" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 41.3713, 0.0607005, 0.0300857)
+
+[node name="StaticKlemm2x30" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 41.5132, 0.0607005, 0.169495)
+
+[node name="StaticKlemm2x18" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 42.458, 0.0607005, 0.187661)
+
+[node name="StaticKlemm2x23" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.4758, 0.0607005, 0.24743)
+
+[node name="StaticKlemm2x31" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.5495, 0.0607005, 0.00638655)
+
+[node name="StaticKlemm2x32" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.692, 0.0607005, 0.146944)
+
+[node name="StaticKlemm2x60" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 44.695, 0.0607004, -0.382993)
+
+[node name="StaticKlemm2x63" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 44.8375, 0.0607004, -0.242436)
+
+[node name="StaticKlemm2x50" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.999755, 0, 0.022129, 0, 1, 0, -0.022129, 0, 0.999755, 46.0925, 0.0607005, -0.387448)
+
+[node name="StaticKlemm2x51" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.999755, 0, 0.022129, 0, 1, 0, -0.022129, 0, 0.999755, 46.0983, 0.0607005, -0.187369)
+
+[node name="StaticKlemm2x54" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.999755, 0, 0.022129, 0, 1, 0, -0.022129, 0, 0.999755, 46.1023, 0.0607005, 0.0128026)
+
+[node name="StaticKlemm2x52" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.999755, 0, 0.022129, 0, 1, 0, -0.022129, 0, 0.999755, 46.3899, 0.0607006, -0.185615)
+
+[node name="StaticKlemm2x55" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.999755, 0, 0.022129, 0, 1, 0, -0.022129, 0, 0.999755, 46.3854, 0.0607007, -0.380452)
+
+[node name="StaticKlemm2x53" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.999755, 0, 0.022129, 0, 1, 0, -0.022129, 0, 0.999755, 46.3957, 0.0607006, 0.0144635)
+
+[node name="StaticKlemm2x57" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.885134, 0, 0.465336, 0, 1, 0, -0.465336, 0, 0.885134, 46.8704, 0.0607005, -0.179903)
+
+[node name="StaticKlemm2x58" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.885134, 0, 0.465336, 0, 1, 0, -0.465336, 0, 0.885134, 46.7795, 0.0607006, -0.352317)
+
+[node name="StaticKlemm2x59" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.885134, 0, 0.465336, 0, 1, 0, -0.465336, 0, 0.885134, 46.9647, 0.0607005, -0.00337949)
+
+[node name="StaticKlemm2x61" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.856276, 0, -0.516518, 0, 1, 0, 0.516518, 0, 0.856276, 46.9658, 0.0607007, -0.364329)
+
+[node name="StaticKlemm2x62" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.847279, 0, -0.531147, 0, 1, 0, 0.531147, 0, 0.847279, 46.7604, 0.0607005, -0.0104724)
+
+[node name="StaticKlemm2x24" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 44.3108, 0.0607005, 0.136837)
+
+[node name="StaticKlemm2x40" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.6813, 0.0607004, -0.403004)
+
+[node name="StaticKlemm2x36" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 44.0213, 0.0607005, -0.0478791)
+
+[node name="StaticKlemm2x44" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 44.3657, 0.0607005, -0.23621)
+
+[node name="StaticKlemm2x34" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.1371, 0.0607004, -0.389887)
+
+[node name="StaticKlemm2x17" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 42.355, 0.0639178, 0.0134248)
+
+[node name="StaticKlemm2x20" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.0746, 0.0639178, 0.159864)
+
+[node name="StaticKlemm2x21" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.4498, 0.0639178, -0.163419)
+
+[node name="StaticKlemm2x22" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 43.865, 0.0639178, 0.254096)
+
+[node name="StaticKlemm2x28" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 44.6261, 0.0639179, -0.0382276)
+
+[node name="StaticKlemm2x48" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.999999, 0, -0.0010297, 0, 1, 0, 0.0010297, 0, 0.999999, 45.5675, 0.0639179, -0.292978)
+
+[node name="StaticKlemm2x49" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.999999, 0, -0.0010297, 0, 1, 0, 0.0010297, 0, 0.999999, 45.5658, 0.0639179, -0.0913275)
+
+[node name="StaticKlemm2x56" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.999755, 0, 0.022129, 0, 1, 0, -0.022129, 0, 0.999755, 46.244, 0.0639179, -0.186101)
+
+[node name="StaticKlemm2x43" parent="Level_Pachinko/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 44.2596, 0.0639179, -0.411605)
+
+[node name="StaticKlemm2x26" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37726e-08, 0, 1.0014, 0, 1.0014, 0, -1.0014, 0, -4.37726e-08, 42.2355, 0.0582524, -0.454133)
+
+[node name="StaticKlemm2x64" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37726e-08, 0, 1.0014, 0, 1.0014, 0, -1.0014, 0, -4.37726e-08, 42.4332, 0.0582524, -0.454133)
+
+[node name="StaticKlemm2x65" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37726e-08, 0, 1.0014, 0, 1.0014, 0, -1.0014, 0, -4.37726e-08, 42.6336, 0.0582524, -0.454133)
+
+[node name="StaticKlemm2x66" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37726e-08, 0, 1.0014, 0, 1.0014, 0, -1.0014, 0, -4.37726e-08, 42.2355, 0.0582524, 0.453548)
+
+[node name="StaticKlemm2x67" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37726e-08, 0, 1.0014, 0, 1.0014, 0, -1.0014, 0, -4.37726e-08, 42.4332, 0.0582524, 0.453548)
+
+[node name="StaticKlemm2x68" parent="Level_Pachinko/Geometry" instance=ExtResource("16_0rp6p")]
+transform = Transform3D(-4.37726e-08, 0, 1.0014, 0, 1.0014, 0, -1.0014, 0, -4.37726e-08, 42.6336, 0.0582524, 0.453548)
+
 [node name="Node3D" parent="." instance=ExtResource("16_fvw7l")]
-transform = Transform3D(-3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0, 0, 0, 0.7, 40.0428, 0.181049, 0.0546679)
+transform = Transform3D(-3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0, 0, 0, 0.7, 54.8931, 0.23658, 0.0546679)
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("11_4a6xw")]
 
@@ -1786,7 +2088,7 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Destination" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.088, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.8977, 0, 0)
 collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Destination"]
@@ -1800,9 +2102,68 @@ stream = ExtResource("23_0y0iq")
 volume_db = -15.0
 autoplay = true
 
+[node name="Level_BiggusRampus" type="Node" parent="."]
+
+[node name="Geometry" type="Node" parent="Level_BiggusRampus"]
+
+[node name="StaticKlemm2x2" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5336, 0.0606597, 0.408779)
+
+[node name="StaticKlemm2x6" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5336, 0.162732, 0.408779)
+
+[node name="StaticKlemm2x3" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5336, 0.0606597, -0.397963)
+
+[node name="StaticKlemm2x4" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5336, 0.159179, -0.397963)
+
+[node name="StaticKlemm2x5" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5336, 0.257284, -0.397963)
+
+[node name="StaticKlemm2x7" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.11, 0.0606597, -0.197811)
+
+[node name="StaticKlemm2x8" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.11, 0.159179, -0.197811)
+
+[node name="StaticKlemm2x9" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.11, 0.257284, -0.197811)
+
+[node name="StaticKlemm2x13" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6741, 0.0606597, -0.197811)
+
+[node name="StaticKlemm2x14" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6741, 0.159179, -0.197811)
+
+[node name="StaticKlemm2x15" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6741, 0.257284, -0.197811)
+
+[node name="StaticKlemm2x16" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6741, 0.354903, -0.197811)
+
+[node name="StaticKlemm2x17" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6741, 0.457464, -0.197811)
+
+[node name="StaticKlemm2x10" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.7492, 0.0606597, -0.197811)
+
+[node name="StaticKlemm2x11" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.7492, 0.159179, -0.197811)
+
+[node name="StaticKlemm2x12" parent="Level_BiggusRampus/Geometry" instance=ExtResource("8_gx648")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.7492, 0.257284, -0.197811)
+
 [connection signal="body_entered" from="Destination" to="GameManager" method="_on_destination_body_entered"]
 
 [editable path="Camera"]
+[editable path="WalkableFloor/CameraRail5"]
+[editable path="WalkableFloor/CameraRail6"]
+[editable path="WalkableFloor/ordner8"]
+[editable path="WalkableFloor/CameraRail2"]
+[editable path="WalkableFloor/CameraRail7"]
+[editable path="WalkableFloor/CameraRail3"]
+[editable path="WalkableFloor/CameraRail4"]
 [editable path="Level_Intro/Interactable/Roomba15"]
 [editable path="Level_Corner section/Interactable/Roomba5"]
 [editable path="Level_Corner section/Interactable/Roomba6"]

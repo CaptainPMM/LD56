@@ -12,7 +12,7 @@ background_mode = 2
 sky = SubResource("Sky_uml67")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_umasd"]
-size = Vector3(2.54, 0.5, 1.76)
+size = Vector3(2.54, 1.5, 1.76)
 
 [node name="Camera" type="Node3D"]
 script = ExtResource("1_mldnq")

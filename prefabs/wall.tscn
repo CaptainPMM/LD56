@@ -7,12 +7,12 @@ size = Vector3(50, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rjyp8"]
 albedo_texture = ExtResource("1_xgvxx")
-uv1_scale = Vector3(150, 2, 1)
+uv1_scale = Vector3(300, 2, 1)
 grow_amount = 11.912
 
 [sub_resource type="BoxMesh" id="BoxMesh_b4w7f"]
 material = SubResource("StandardMaterial3D_rjyp8")
-size = Vector3(50, 1, 1)
+size = Vector3(100, 1, 1)
 
 [node name="Node3D" type="Node3D"]
 
