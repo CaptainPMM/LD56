@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://8l51aa8ut0vu" path="res://models/Ordner.glb" id="1_povam"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_64jdq"]
-size = Vector3(2.02337, 1, 1.98694)
+size = Vector3(2.13327, 1, 1.98694)
 
 [node name="ordner" type="Node3D"]
 
@@ -14,5 +14,5 @@ collision_mask = 3
 [node name="Ordner" parent="StaticBody3D" instance=ExtResource("1_povam")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(0.965332, -0.261027, 0, 0.261027, 0.965332, 0, 0, 0, 1, -0.0983051, -0.474608, 0.00372314)
+transform = Transform3D(0.965332, -0.261027, 0, 0.261027, 0.965332, 0, 0, 0, 1, -0.151349, -0.488951, 0.00372314)
 shape = SubResource("BoxShape3D_64jdq")
